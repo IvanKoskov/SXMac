@@ -125,4 +125,43 @@
     return documentsPath;
 }
 
+
+
+- (NSString *)deleteTheFile:(NSString *)file {
+    NSArray *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [documentsDirectory firstObject];
+    
+    // Define the folder name
+    NSString *folderName = @"/SXMacFiles";  // Update with the correct folder name
+    NSString *pathToFiles = [documentsPath stringByAppendingPathComponent:folderName];
+    // Create the full path for the file to delete
+    NSString *fileToDelete = [pathToFiles stringByAppendingPathComponent:file];
+    
+    // Log the file path to verify it's correct
+    NSLog(@"Attempting to delete file at path: %@", fileToDelete);
+    
+    // Get the file manager instance
+    NSFileManager *manager = [NSFileManager defaultManager];
+    
+    // Check if the file exists
+    if ([manager fileExistsAtPath:fileToDelete]) {
+        // Try to delete the file
+        NSError *error = nil;
+        BOOL success = [manager removeItemAtPath:fileToDelete error:&error];
+        if (success) {
+            NSLog(@"File %@ successfully deleted.", file);
+            return [NSString stringWithFormat:@"File %@ successfully deleted.", file];
+        } else {
+            // Log the error if deletion fails
+            NSLog(@"Failed to delete file %@. Error: %@", file, error.localizedDescription);
+            return [NSString stringWithFormat:@"Failed to delete file %@. Error: %@", file, error.localizedDescription];
+        }
+    } else {
+        // File does not exist
+        NSLog(@"File %@ does not exist.", file);
+        return [NSString stringWithFormat:@"File %@ does not exist.", file];
+    }
+}
+
+
 @end

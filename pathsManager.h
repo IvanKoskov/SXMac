@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(NSString *)filesLocationOnMac;
 -(nonnull NSArray<NSString *> *)fileListedOnTheLocation:(nonnull NSString *)folder;
 -(BOOL)exportSelectedFile:(nonnull NSString *)path To:(nonnull NSString *)folder;
+-(NSString *)deleteTheFile:(NSString *)file;
 
 @end
 

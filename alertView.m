@@ -9,4 +9,25 @@
 
 @implementation alertView
 
+
+- (void)showAlertWithMessage:(NSString *)message {
+    // Get the key window of the application (global window)
+    NSWindow *keyWindow = [NSApplication sharedApplication].keyWindow;
+    
+    // If there's no key window, fall back to the main window (if necessary)
+    if (!keyWindow) {
+        keyWindow = [NSApplication sharedApplication].windows.firstObject;
+    }
+    
+    // Create and configure the alert
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:@"SXMac EXPORTED"];
+    [alert setInformativeText:message];
+    [alert addButtonWithTitle:@"Dismiss"];
+    
+    // Show the alert as a sheet on the key window (or main window)
+    [alert beginSheetModalForWindow:keyWindow completionHandler:nil];
+}
+
+
 @end

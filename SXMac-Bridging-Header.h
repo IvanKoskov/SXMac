@@ -3,3 +3,4 @@
 //
 
 #import "pathsManager.h" //manage paths for SXMac 
+#import "alertView.h" //alert in Objective-C
