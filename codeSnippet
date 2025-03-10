@@ -1,0 +1,62 @@
+
+//Some code that was used before in development
+
+
+
+
+import SwiftUI
+
+@main
+struct MultiWindowApp: App {
+    var body: some Scene {
+        // Main Window
+        WindowGroup {
+            ContentView()
+        }
+        .windowStyle(HiddenTitleBarWindowStyle()) // Optional: Hide title bar for main window
+           
+        // Second Window
+        Window("Second Window", id: "second-window") { // Define the second window with an ID
+            SecondView()
+        }
+        .windowStyle(HiddenTitleBarWindowStyle()) // Optional: Hide title bar for second window
+        .defaultSize(width: 400, height: 300) // Set default size for the second window
+    }
+}
+
+struct ContentView: View {
+    @Environment(\.openWindow) private var openWindow
+
+    var body: some View {
+        VStack {
+            Text("Main Window")
+                .font(.largeTitle)
+                .padding()
+
+            Button("Open Second Window") {
+                openWindow(id: "second-window") // Open the second window using its ID
+            }
+            .padding()
+        }
+        .frame(width: 400, height: 300)
+    }
+}
+
+struct SecondView: View {
+    @Environment(\.dismissWindow) private var dismissWindow
+
+    var body: some View {
+        VStack {
+            Text("Second Window")
+                .font(.largeTitle)
+                .padding()
+
+            Button("Close Window") {
+                dismissWindow(id: "second-window") // Close the second window using its ID
+            }
+            .padding()
+        }
+        .frame(width: 400, height: 300)
+    }
+}
+
