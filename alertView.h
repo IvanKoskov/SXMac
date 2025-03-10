@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface alertView : NSObject
 
-- (void)showAlertWithMessage:(NSString *)message;
-
+- (void)showAlertWithMessage:(NSString *)message; //for files stuff
+- (void)showhelphMessage:(NSString *)message; //for user guide
 
 @end
 

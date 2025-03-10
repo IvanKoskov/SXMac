@@ -164,4 +164,66 @@
 }
 
 
+- (BOOL)importFileToTheApp:(NSString *)path {
+    
+    // Get the documents directory
+    NSArray *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [documentsDirectory firstObject];
+    
+    // Define the folder name (make sure this folder exists)
+    NSString *folderName = @"/SXMacFiles";  // Update with the correct folder name
+    NSString *destinationFolderPath = [documentsPath stringByAppendingPathComponent:folderName];
+    
+    // Make sure the folder exists, if not, create it
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:destinationFolderPath]) {
+        NSError *error = nil;
+        BOOL success = [fileManager createDirectoryAtPath:destinationFolderPath withIntermediateDirectories:YES attributes:nil error:&error];
+        if (!success) {
+            NSLog(@"Failed to create directory: %@", error.localizedDescription);
+            return NO;
+        }
+    }
+    
+    // Get the file name from the source path
+    NSString *fileName = [path lastPathComponent];
+    NSString *destinationFilePath = [destinationFolderPath stringByAppendingPathComponent:fileName];
+    
+    // Check if the item at the destination is a file or directory
+    BOOL isDirectory = NO;
+    if ([fileManager fileExistsAtPath:destinationFilePath isDirectory:&isDirectory]) {
+        // Handle the case where the destination already exists
+        if (isDirectory) {
+            NSLog(@"A directory with the same name already exists at destination: %@", destinationFilePath);
+            return NO;  // You can't move a file into a directory with the same name
+        } else {
+            NSLog(@"A file with the same name already exists at destination: %@", destinationFilePath);
+            return NO;  // A file already exists with this name
+        }
+    }
+    
+    // Try moving the file or directory to the destination
+    NSError *error = nil;
+    BOOL success = NO;
+    
+    if ([fileManager fileExistsAtPath:path isDirectory:&isDirectory]) {
+        if (isDirectory) {
+            // It's a directory, use moveItemAtPath for directories
+            success = [fileManager moveItemAtPath:path toPath:destinationFilePath error:&error];
+        } else {
+            // It's a file, use moveItemAtPath for files
+            success = [fileManager moveItemAtPath:path toPath:destinationFilePath error:&error];
+        }
+    }
+    
+    if (success) {
+        NSLog(@"Item moved successfully to %@", destinationFilePath);
+        return YES;
+    } else {
+        NSLog(@"Error moving item: %@", error.localizedDescription);
+        return NO;
+    }
+}
+
+
 @end

@@ -30,4 +30,28 @@
 }
 
 
+- (void)showhelphMessage:(NSString *)message {
+    // Get the key window of the application (global window)
+    NSWindow *keyWindow = [NSApplication sharedApplication].keyWindow;
+    
+    // If there's no key window, fall back to the main window (if necessary)
+    if (!keyWindow) {
+        keyWindow = [NSApplication sharedApplication].windows.firstObject;
+    }
+    
+    // Create and configure the alert
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:@"SXMac interface"];
+    [alert setInformativeText:message];
+    [alert addButtonWithTitle:@"Got it!"];
+    
+    [alert setAlertStyle:NSAlertStyleInformational];
+    
+    // Show the alert as a sheet on the key window (or main window)
+    [alert beginSheetModalForWindow:keyWindow completionHandler:nil];
+}
+
+
+
+
 @end

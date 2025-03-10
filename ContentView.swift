@@ -60,6 +60,9 @@ struct ContentView: View {
     @State private var filename = "Filename"
     @State private var showFileChooser = false
     
+    
+    @State var fileNameToImport = "";
+    
     var body: some View {
         VStack {
             VStack {
@@ -169,22 +172,48 @@ struct ContentView: View {
                 Spacer()
                 
                 Button {
-                    print("TESTEDDDDd")
+                    let alertView = alertView()
+                    var helpMessage: String = """
+In order to delete files directly hold the file in the list with two fingers on touch pad or use left click hold on your magic mouse.
+
+If you want to export by the way just click open the needed file and just tap the share icon on the pop menu!
+"""
+                    alertView.showhelphMessage(helpMessage)
                 } label: {
                     Image(systemName: "xmark.bin")
                 }
-                
+
                 Button {
                     let panel = NSOpenPanel()
                     panel.allowsMultipleSelection = false
                     panel.canChooseDirectories = false
                     if panel.runModal() == .OK {
-                        self.filename = panel.url?.lastPathComponent ?? "<none>"
-                        print(self.filename)
+                        if let fileURL = panel.url {
+                            // Get the full path to the file
+                            fileNameToImport = fileURL.path
+                            // Get the short name (file name only)
+                            let shortFileName = fileURL.lastPathComponent
+
+                            print("Full path: \(fileNameToImport)")
+                            print("Short name: \(shortFileName)")
+
+                            // Now you can use both
+                            files.append(shortFileName)
+                            
+                            let pathsManager = pathsManager()
+                            pathsManager.importFile(toTheApp: fileNameToImport)
+
+                            // You can store the short name separately if needed
+                            // For example, you can store it in another array or variable if required
+                        } else {
+                            self.filename = "<none>"
+                        }
                     }
                 } label: {
                     Image(systemName: "plus.magnifyingglass")
                 }
+
+                
             }
             .padding()
         }
