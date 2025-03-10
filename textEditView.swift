@@ -11,9 +11,13 @@
 import SwiftUI
 
 struct textEditView: View {
-    @EnvironmentObject var globalfile: GlobalDataModel
+    @EnvironmentObject var globalfile: GlobalDataModel  // Access environment object
+
     var body: some View {
-        Text("hello, Evan")
+        VStack {
+            TextEditor(text: $globalfile.contentsOfFileGlobal)  // Bind to the environment object
+                .frame(width: 600, height: 500)  // Specify frame size
+                .padding()
+        }
     }
 }
-
