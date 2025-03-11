@@ -39,3 +39,13 @@
 - More developers may join, possibly...
 - Add elements to the text editing view
 - preview
+- highlighting and themes support for all popular languages (over 50 well known)
+- Select the format
+- Reference table
+- Copy buffer
+- Integrated third party libraries
+- New dependencies
+- Internal alpha version release (1.0.5)
+- New submenu in the text editor with helpful info
+- Revised code
+- UNCONFIRMED mobile version

@@ -22,11 +22,13 @@
 */
 
 import SwiftUI
+import CodeEditor //for variable
 
 class GlobalDataModel: ObservableObject {
     @Published var filePathed: String = "blank"
     @Published var contentsOfFileGlobal: String = "BLANK"
     @Published var settingsExportPath: String = "";
+    @Published var language = CodeEditor.Language.markdown
 }
 
     
@@ -76,7 +78,15 @@ struct SXMacApp: App {
         .windowResizabilityContentSize()
         .windowStyle(HiddenTitleBarWindowStyle()) // Optional: Hide title bar for second window
         
-        
+        Window("SXMac MarkDown", id: "preview-window") { // Define the second window with an ID
+            previewText()
+                .environmentObject(globaldata)
+                .frame(width: 700, height: 600)
+                .fixedSize()
+                .background(LinearGradient(gradient: Gradient(colors: [.blue, .gray, .blue]), startPoint: .top, endPoint: .bottom))
+        }
+        .windowResizabilityContentSize()
+        .windowStyle(HiddenTitleBarWindowStyle()) // Optional: Hide title bar for second window
         
         
         

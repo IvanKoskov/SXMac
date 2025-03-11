@@ -18,9 +18,13 @@ import CodeEditor //for code, custom views and etc
 
 struct languagesView: View {
     
+    
+    
+
+    
     @State private var languagesThemes = """
                For the most of those formats and themes you can edit text in SXMac:
-
+               NOTE!!! For now syntax highlighting is applied only for .md files.
 
 
 

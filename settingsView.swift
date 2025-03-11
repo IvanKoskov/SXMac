@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CodeEditor
 
 struct infosettings: Identifiable {
     var id = UUID() // Conforming to Identifiable
@@ -16,7 +17,7 @@ struct infosettings: Identifiable {
 struct settingsView: View {
     @State private var options = [
         infosettings(nameOFoption: "App files", descriptionText: "/user/documents/SXMacFiles..."),
-        infosettings(nameOFoption: "Version", descriptionText: "1.0.1 alpha"),
+        infosettings(nameOFoption: "Version", descriptionText: "1.0.5 alpha"),
         infosettings(nameOFoption: "Color scheme", descriptionText: "Deep shallow Ocean"),
         infosettings(nameOFoption: "Supported formats", descriptionText: ".md & other markdown"),
         infosettings(nameOFoption: "LICENSE", descriptionText: " Creative Commons Attribution-NonCommercial 4.0 International")
@@ -67,6 +68,25 @@ struct settingsView: View {
                 
                 Divider()
                 
+                
+                HStack {
+                    Text("Available languages & Mardown picker")
+                        .fontWeight(.bold)
+                    Spacer()
+                    Picker("", selection: $globaldata.language) {
+                               ForEach(CodeEditor.availableLanguages) { language in
+                                   Text("\(language.rawValue.capitalized)")
+                                       .tag(language)
+                               }
+                           }
+                }
+                .padding() // Add padding to each row
+                .background(Color.clear) // Ensure no background for the rows
+                
+                Divider()
+                
+                
+                
                 HStack {
                     Text("Available languages & Mardown")
                         .fontWeight(.bold)
@@ -111,6 +131,32 @@ struct settingsView: View {
                 .padding() // Add padding to each row
                 .background(Color.clear) // Ensure no background for the rows
                 
+                Divider()
+                
+                HStack {
+                    Image("reference")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        
+                        .frame(maxWidth: 80, maxHeight: 80)
+                        
+                        .shadow(color: .gray, radius: 50, x: 0, y: 35)
+                    Spacer()
+                    VStack {
+                        Text("ZeeZide")
+                            .padding(.leading, -50)
+                            .foregroundColor(.white)
+                            .bold()
+                        
+                        Text("CodeEditor, editor view, languages and etc")
+                            
+                            .font(.system(size: 14))
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                    }
+                }
+                .padding() // Add padding to each row
+                .background(Color.clear) // Ensure no background for the rows
                 
                 
             }

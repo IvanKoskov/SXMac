@@ -4,15 +4,18 @@
 //
 //  Created by Evan Matthew on 11/3/2568 BE.
 //
-
+import Markdown
 import SwiftUI
 
+
+
 struct previewText: View {
+    
+    @EnvironmentObject var globaldata: GlobalDataModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Markdown(content: $globaldata.contentsOfFileGlobal)
+        Text("hiu")
     }
 }
 
-#Preview {
-    previewText()
-}

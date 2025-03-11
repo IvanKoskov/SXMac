@@ -15,12 +15,21 @@ import CodeEditor
 
 struct textEditView: View {
     
-    @EnvironmentObject var globalfile: GlobalDataModel  // Access environment object
+    @Environment(\.openWindow) private var openWindow
+    
+    @EnvironmentObject var globalfile: GlobalDataModel  // Access environment object and etc
     @State private var showingTextMenu: Bool = false
+   // @State private var language = CodeEditor.Language.markdown //default
+    
+    @State private var showingSecondTextMenu: Bool = false
     
     var body: some View {
         VStack {
-            CodeEditor(source: $globalfile.contentsOfFileGlobal, language: .swift, theme: .ocean) // Bind to the environment object???? this is custom textView from CodeEditor library
+            if (true) {
+                
+                
+            }
+            CodeEditor(source: $globalfile.contentsOfFileGlobal, language: globalfile.language, theme: .ocean) // Bind to the environment object???? this is custom textView from CodeEditor library
                 .frame(minWidth: 600, minHeight: 500)  // Specify frame size
                 .padding()
                 .onAppear {
@@ -42,6 +51,9 @@ struct textEditView: View {
                                                 .fontWeight(.bold)
                                             Spacer()
                                             Button("Save") {
+                                                let pathsManager = pathsManager()
+                                                var logResult: Bool =  pathsManager.saveTheNewText(toThefile: globalfile.filePathed, and: globalfile.contentsOfFileGlobal)
+                                                print(logResult)
                                                 showingTextMenu = false
                                             }
                                         }
@@ -68,6 +80,8 @@ struct textEditView: View {
                                                 .fontWeight(.bold)
                                             Spacer()
                                             Button("Preview") {
+                                                print(globalfile.contentsOfFileGlobal)
+                                                openWindow(id: "preview-window")
                                                 showingTextMenu = false
                                             }
                                         }
@@ -77,18 +91,53 @@ struct textEditView: View {
                                         Divider()
                                         
                                         HStack {
-                                            Text("Other")
+                                            Text("Other & Help")
                                                 .fontWeight(.bold)
                                             Spacer()
                                             
                                             Button(action: {
                                                 print(CodeEditor.availableLanguages)
                                                 print(CodeEditor.availableThemes)
-                                                showingTextMenu = false
+                                                showingSecondTextMenu = true
                                             }) {
                                                 Image(systemName: "gear")
                                                     .imageScale(.large) // You can customize the image size here if needed
                                             }
+                                            .popover(isPresented: $showingSecondTextMenu) {
+                                                ScrollView {
+                                                    
+                                                    
+                                                    VStack{
+                                                        
+                                                        
+                                                        HStack {
+                                                            Text("To change highlight go to settings")
+                                                                .fontWeight(.bold)
+                                                          
+                                                        }
+                                                        .padding()
+                                                        .background(Color.clear)
+                                                        
+                                                        Divider()
+                                                        
+                                                        HStack {
+                                                            Text("To apply reopen the file from menu")
+                                                                .bold()
+                                        
+                                                        
+                                                        }
+                                                        .padding()
+                                                        .background(Color.clear)
+                                                    
+                                                    
+                                                        
+                                                    }
+                                                    .padding(.top, 10)
+                                                    .frame(width: 200, height: 200)
+                                                }
+                                            }
+                                            
+                                            
                                         }
                                         .padding()
                                         .background(Color.clear)

@@ -226,4 +226,30 @@
 }
 
 
+- (BOOL)saveTheNewTextToThefile:(nonnull NSString *)pathToFile And:(nonnull NSString *)contents {
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager]; //make a file manager
+    
+    // Check 
+    if (![fileManager fileExistsAtPath:pathToFile]) {
+        NSError *error = nil;
+        [fileManager createFileAtPath:pathToFile contents:nil attributes:nil];
+        if (error) {
+            NSLog(@"Error creating file: %@", error.localizedDescription);
+            return NO;
+        }
+    }
+    
+    // Write
+    NSError *writeError = nil;
+    BOOL success = [contents writeToFile:pathToFile atomically:YES encoding:NSUTF8StringEncoding error:&writeError];
+    
+    if (writeError) {
+        NSLog(@"Error writing to file: %@", writeError.localizedDescription);
+        return NO;
+    }
+    
+    return YES; // success
+}
+
 @end

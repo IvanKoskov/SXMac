@@ -6,6 +6,8 @@
 //
 
 // PathsManager is a class that is moving and manipulating all the files in the app and instances
+// PathsManager provides full MacOS functions implementations for directories, file management and etc.
+// Fully back compatible with custom C++ version of it that is deprecated recently, but can be accessed from our repo archive.
 
 #import <Foundation/Foundation.h>
 
@@ -19,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(BOOL)exportSelectedFile:(nonnull NSString *)path To:(nonnull NSString *)folder;
 -(NSString *)deleteTheFile:(NSString *)file;
 -(BOOL)importFileToTheApp:(NSString *)path;
+-(BOOL)saveTheNewTextToThefile:(NSString *)pathToFile And:(NSString *)contents;
 
 @end
 
