@@ -103,61 +103,113 @@ struct settingsView: View {
                 
                 Divider()
                 
-                HStack {
-                    Image("evan")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .clipShape(.circle)
-                        .frame(maxWidth: 80, maxHeight: 80)
-                        .overlay(
-                               Circle() // Add a Circle for the border
-                                   .stroke(Color.black, lineWidth: 4) // Black border with thickness of 4
-                           )
-                        .shadow(color: .gray, radius: 50, x: 0, y: 35)
-                    Spacer()
-                    VStack {
-                        Text("Evan Matthew ")
-                            .padding(.leading, -15)
-                            .foregroundColor(.white)
+                VStack {
+                    // Title Section
+                    HStack {
+                        Text("Developers & Contributors")
                             .bold()
-                        
-                        Text("Main developer, UI designer and maintainer")
-                            
-                            .font(.system(size: 14))
                             .foregroundColor(.white)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .frame(maxWidth: .infinity, alignment: .center)
                     }
-                }
-                .padding() // Add padding to each row
-                .background(Color.clear) // Ensure no background for the rows
-                
-                Divider()
-                
-                HStack {
-                    Image("reference")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
+                    .padding()
+
+                    Divider()
+
+                    // First Developer Section
+                    HStack {
+                        Image("evan")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .clipShape(Circle())
+                            .frame(width: 80, height: 80)
+                            .overlay(
+                                Circle()
+                                    .stroke(Color.black, lineWidth: 4) // Border
+                            )
+                            .shadow(color: .gray, radius: 10, x: 0, y: 5)
                         
-                        .frame(maxWidth: 80, maxHeight: 80)
+                        Spacer()
                         
-                        .shadow(color: .gray, radius: 50, x: 0, y: 35)
-                    Spacer()
-                    VStack {
-                        Text("ZeeZide")
-                            .padding(.leading, -50)
-                            .foregroundColor(.white)
+                        VStack(alignment: .leading) {
+                            Text("Evan Matthew")
+                                .bold()
+                                .foregroundColor(.white)
+                                .padding(.leading, -3)
+                            
+                            Text("Main developer, UI designer and maintainer")
+                                .font(.system(size: 14))
+                                .foregroundColor(.white)
+                        }
+                        .padding(.leading, 10)
+                    }
+                    .padding()
+                    
+                    Divider()
+                    
+                    // Second Developer Section (Fixing alignment here)
+                    HStack {
+                        Image("referencedev")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .clipShape(Circle())
+                            .frame(width: 80, height: 80)
+                            .shadow(color: .gray, radius: 10, x: 0, y: 5)
+                        
+                        Spacer()
+                        
+                        VStack(alignment: .leading) {
+                            Text("buenos aires")
+                                .bold()
+                                .foregroundColor(.white)
+                            
+                            Text("Contributor, various help and co-owner")
+                                .font(.system(size: 14))
+                                .foregroundColor(.white)
+                        }
+                        .padding(.trailing, 30)
+                        .frame(maxWidth: .infinity, alignment: .trailing) // Ensure alignment is to the left
+                    }
+                    .padding()
+                    
+                    Divider()
+                    
+                    // Special Thanks Section
+                    HStack {
+                        Text("Special thanks")
                             .bold()
-                        
-                        Text("CodeEditor, editor view, languages and etc")
-                            
-                            .font(.system(size: 14))
                             .foregroundColor(.white)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .frame(maxWidth: .infinity, alignment: .center)
                     }
+                    .padding()
+                    
+                    Divider()
+                    
+                    // Special Contributor Section
+                    HStack {
+                        Image("reference")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .clipShape(Circle())
+                            .frame(width: 80, height: 80)
+                            .shadow(color: .gray, radius: 10, x: 0, y: 5)
+                        
+                        Spacer()
+                        
+                        VStack(alignment: .leading) {
+                            Text("ZeeZide")
+                                .bold()
+                                .foregroundColor(.white)
+                            
+                            Text("CodeEditor, editor view, languages and other")
+                                .font(.system(size: 14))
+                                .foregroundColor(.white)
+                        }
+                        .padding(.leading, 10)
+                    }
+                    .padding()
                 }
-                .padding() // Add padding to each row
-                .background(Color.clear) // Ensure no background for the rows
-                
+                .background(Color.clear)
+
                 
             }
             .padding()

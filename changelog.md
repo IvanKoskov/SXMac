@@ -49,3 +49,15 @@
 - New submenu in the text editor with helpful info
 - Revised code
 - UNCONFIRMED mobile version
+
+## 1.0.2 Public early testing beta
+
+- Added renderer for Markdown text
+- Quick refresh the preview (almost)
+- Quickly apply changes
+- Syntax highlighting for over 180 supported languages and themes thanks to https://github.com/ZeeZide
+- Clear UI and easy implementation
+- Export, Import your changes that you have made
+- Set your your out put path (finished)
+- Now it can be considered usable and we plan to maintain and improve it in nearest future with more options, languages, previews, shortcuts!
+
