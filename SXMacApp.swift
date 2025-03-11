@@ -61,7 +61,7 @@ struct SXMacApp: App {
                 .environmentObject(globaldata)
                 .frame(width: 600, height: 500)
                 .fixedSize()
-                .background(LinearGradient(gradient: Gradient(colors: [.cyan, .blue, .gray]), startPoint: .top, endPoint: .bottom))
+                .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue, .gray]), startPoint: .top, endPoint: .bottom))
         }
         .windowResizabilityContentSize()
         .windowStyle(HiddenTitleBarWindowStyle()) // Optional: Hide title bar for second window

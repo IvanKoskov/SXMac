@@ -37,3 +37,5 @@
 - And more (see commits)
 - License is planned to be changed!
 - More developers may join, possibly...
+- Add elements to the text editing view
+- preview
