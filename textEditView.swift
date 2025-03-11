@@ -11,6 +11,7 @@
 
 
 import SwiftUI
+import CodeEditor
 
 struct textEditView: View {
     
@@ -19,7 +20,7 @@ struct textEditView: View {
     
     var body: some View {
         VStack {
-            TextEditor(text: $globalfile.contentsOfFileGlobal)  // Bind to the environment object
+            CodeEditor(source: $globalfile.contentsOfFileGlobal, language: .swift, theme: .ocean) // Bind to the environment object???? this is custom textView from CodeEditor library
                 .frame(minWidth: 600, minHeight: 500)  // Specify frame size
                 .padding()
                 .onAppear {
@@ -81,6 +82,8 @@ struct textEditView: View {
                                             Spacer()
                                             
                                             Button(action: {
+                                                print(CodeEditor.availableLanguages)
+                                                print(CodeEditor.availableThemes)
                                                 showingTextMenu = false
                                             }) {
                                                 Image(systemName: "gear")
