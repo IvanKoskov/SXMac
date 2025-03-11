@@ -53,7 +53,7 @@ struct textEditView: View {
                                             Text("Discard changes")
                                                 .fontWeight(.bold)
                                             Spacer()
-                                            Button("And close") {
+                                            Button("Close editor") {
                                                 showingTextMenu = false
                                             }
                                         }
@@ -63,10 +63,10 @@ struct textEditView: View {
                                         Divider()
                                         
                                         HStack {
-                                            Text("Quit")
+                                            Text("Markdown viewer")
                                                 .fontWeight(.bold)
                                             Spacer()
-                                            Button("Close Popover") {
+                                            Button("Preview") {
                                                 showingTextMenu = false
                                             }
                                         }
@@ -76,10 +76,27 @@ struct textEditView: View {
                                         Divider()
                                         
                                         HStack {
+                                            Text("Other")
+                                                .fontWeight(.bold)
+                                            Spacer()
+                                            
+                                            Button(action: {
+                                                showingTextMenu = false
+                                            }) {
+                                                Image(systemName: "gear")
+                                                    .imageScale(.large) // You can customize the image size here if needed
+                                            }
+                                        }
+                                        .padding()
+                                        .background(Color.clear)
+
+                                        Divider()
+
+                                        HStack {
                                             Text("Quit")
                                                 .fontWeight(.bold)
                                             Spacer()
-                                            Button("Close Popover") {
+                                            Button("Close Md manager") {
                                                 showingTextMenu = false
                                             }
                                         }
@@ -89,17 +106,17 @@ struct textEditView: View {
                                         Divider()
                                         
                                         HStack {
-                                            Text("Quit")
-                                                .fontWeight(.bold)
-                                            Spacer()
-                                            Button("Close Popover") {
-                                                showingTextMenu = false
-                                            }
+                                            Text("UI by Evan Matthew ♡")
+                                                .padding()
+                                                .font(.system(size: 11))
+                                                .italic()
+                                                .foregroundColor(.gray)
+                                                .frame(maxWidth: .infinity, alignment: .center)
                                         }
-                                        .padding()
-                                        .background(Color.clear)
                                         
-                                        Divider()
+                                        
+                                        
+                                        
                                     }
                                 }
                                 .frame(width: 300, height: 200) // Fixed size for the popover
