@@ -28,9 +28,14 @@ Not just that, but file export, easy import of files and centrilzied experience.
 However not being somehting well defined it serves a purpose!
 
 
+## Unity
+
+SXMac leaves what you need to quickly see a file or even start editing it. You can easily drop it to the documents folder in order for it to be recognized or use a file picker box. 
 
 <img width="512" alt="Image" src="https://github.com/user-attachments/assets/e25475a2-e937-4b29-9019-0be9ab44efb3" />
 
+
+Code highlighting without any effort on any files you need. Yes, if you want you can use it totally for basic coding.
 
 <img width="712" alt="Image" src="https://github.com/user-attachments/assets/59f10110-1149-406f-8ea8-99b6bec70286" />
 
