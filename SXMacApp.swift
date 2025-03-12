@@ -8,7 +8,7 @@
 
 
 /*
-
+ 
  
    ______  __ __  ___
   / ___/ |/ //  |/  /___ ______
@@ -20,10 +20,32 @@
  
  SXMac © 2025 by Ivan Koskov (aka Evan Matthew) is licensed under Creative Commons Attribution-NonCommercial 4.0 International Public License
 
+ 
 */
 
 import SwiftUI
 import CodeEditor //for variable
+
+
+//delegate to make custom app bar option
+class AppDelegate: NSObject, NSApplicationDelegate {
+    private var aboutBoxWindowController: NSWindowController?
+
+    func showAboutPanel() {
+        if aboutBoxWindowController == nil {
+            let styleMask: NSWindow.StyleMask = [.closable, .miniaturizable,/* .resizable,*/ .titled]
+            let window = NSWindow()
+            window.styleMask = styleMask
+            window.title = "About My App"
+            window.contentView = NSHostingView(rootView: AboutView())
+            aboutBoxWindowController = NSWindowController(window: window)
+        }
+
+        aboutBoxWindowController?.showWindow(aboutBoxWindowController?.window)
+    }
+}
+
+
 
 class GlobalDataModel: ObservableObject {
     @Published var filePathed: String = "blank"
@@ -32,10 +54,13 @@ class GlobalDataModel: ObservableObject {
     @Published var language = CodeEditor.Language.markdown
 }
 
+
+
     
 
 @main
 struct SXMacApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var globaldata = GlobalDataModel()
     @State private var isFileWindowVisible = true
     var body: some Scene {
@@ -46,6 +71,16 @@ struct SXMacApp: App {
                 .fixedSize()
                 .background(LinearGradient(gradient: Gradient(colors: [.blue, .black, .blue]), startPoint: .top, endPoint: .bottom))
         }
+        .commands {
+            CommandGroup(replacing: CommandGroupPlacement.appInfo) {
+                Button(action: {
+                    appDelegate.showAboutPanel()
+                }) {
+                    Text("SXMac rich editor")
+                }
+            }
+        }
+        .windowStyle(HiddenTitleBarWindowStyle()) 
         .windowResizabilityContentSize()
         
         Window("SXMac settings", id: "second-window") { // Define the second window with an ID
@@ -102,6 +137,9 @@ struct SXMacApp: App {
                 }
                 .windowResizabilityContentSize()
                 .windowStyle(HiddenTitleBarWindowStyle())
+        
+        
+      
         
     }
 }

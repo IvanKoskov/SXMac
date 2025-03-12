@@ -64,3 +64,15 @@
 - Added dynamic color picker for the preview
 - Auto extension detector
 - Default extension
+
+## 1.0.3 & Public early testing beta 2.0.0
+
+- 1.0.5 is considered non usable
+- 1.0.3 version of code should solve many errors, crashes
+- 2.0.0 interanal alpha
+- Added about menu in the app bar
+- App bar controls coming soon
+- Working on UIs
+- Now themes and language highlighting is added automatically
+- and more
+- To do: improve usability, fix freezes in some parts of the app

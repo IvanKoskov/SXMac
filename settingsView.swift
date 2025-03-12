@@ -17,7 +17,7 @@ struct infosettings: Identifiable {
 struct settingsView: View {
     @State private var options = [
         infosettings(nameOFoption: "App files", descriptionText: "/user/documents/SXMacFiles..."),
-        infosettings(nameOFoption: "Version", descriptionText: "1.0.5 alpha"),
+        infosettings(nameOFoption: "Version", descriptionText: "2.0.0 alpha"),
         infosettings(nameOFoption: "Color scheme", descriptionText: "Deep shallow Ocean"),
         infosettings(nameOFoption: "Supported formats", descriptionText: ".md & other markdown"),
         infosettings(nameOFoption: "LICENSE", descriptionText: " Creative Commons Attribution-NonCommercial 4.0 International")
