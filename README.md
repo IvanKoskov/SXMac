@@ -1,6 +1,7 @@
 # SXMac Markdown
 
 [![Platform](https://img.shields.io/badge/Platform-MacOS-blue.svg)](https://developer.apple.com/MacOS/)
+![SwiftUI Support](https://shields.io/badge/SwiftUI-macOS%20v10.15%20%7C%20iOS%20v13-green?logo=Swift&style=flat)
 
 
 <p align="center">
@@ -17,6 +18,13 @@
     <img src="https://img.shields.io/github/contributors/IvanKoskov/SXMac?style=for-the-badge" alt="Contributors">
     <img src="https://img.shields.io/github/last-commit/IvanKoskov/SXMac?style=for-the-badge" alt="Last Commit">
 </p>
+
+
+
+
+
+
+
 
 <details>
   <summary>Change-log & Version notes from the first 1.0.0 build</summary>
@@ -117,5 +125,6 @@
 </details>
 
 
+## License
 
-SXMac © 2025 by Ivan Koskov (aka Evan Matthew) is licensed under Creative Commons Attribution-NonCommercial 4.0 International Public License
+SXMac © 2025 by Ivan Koskov (aka Evan Matthew) is licensed under Creative Commons Attribution-NonCommercial 4.0 International Public License. For more information open LiCENSE file.
