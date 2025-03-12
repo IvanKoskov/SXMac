@@ -19,6 +19,14 @@
     <img src="https://img.shields.io/github/last-commit/IvanKoskov/SXMac?style=for-the-badge" alt="Last Commit">
 </p>
 
+SXMac is a light, notes like app that can be used as a rich text editor, markdown editor and preview, code editor with more than 100 supported languages. If you need specific files or anything else in one place. 
+
+SXMac can be used as a note taking app with simple and clear interface that is doing its job.
+The main focus is to bhe able to previed .md files and dynamicly see changes in your editor.
+Not just that, but file export, easy import of files and centrilzied experience.
+
+However not being somehting well defined it serves a purpose!
+
 
 
 <img width="512" alt="Image" src="https://github.com/user-attachments/assets/e25475a2-e937-4b29-9019-0be9ab44efb3" />
