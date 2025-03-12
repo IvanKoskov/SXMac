@@ -82,19 +82,20 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
 
     // Check if the source file exists
+   /*
     BOOL isDirectory = NO;
     BOOL fileExists = [fileManager fileExistsAtPath:path isDirectory:&isDirectory];
     if (!fileExists || isDirectory) {
         NSLog(@"Source file doesn't exist or is a directory.");
         return NO;
     }
-
+*/
     // Ensure the destination folder exists
-    BOOL folderExists = [fileManager fileExistsAtPath:folder isDirectory:&isDirectory];
+  /*  BOOL folderExists = [fileManager fileExistsAtPath:folder isDirectory:&isDirectory];
     if (!folderExists || !isDirectory) {
         NSLog(@"Destination folder doesn't exist or is not a directory.");
         return NO;
-    }
+    } */
 
     // Create destination path by appending the file name to the folder path
     NSString *fileName = [path lastPathComponent];

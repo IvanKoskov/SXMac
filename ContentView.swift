@@ -283,18 +283,70 @@ struct ContentView: View {
                         openWindow(id: "third-window")
                     }) {
                         Text(file)
+                           
                     }
+                    .buttonStyle(PlainButtonStyle())
                     .contextMenu {
+                        
+                        
+                        Button(action: {
+                           
+                            let pasteboard = NSPasteboard.general
+                                          pasteboard.clearContents()
+                                          pasteboard.setString(file, forType: .string)
+                            
+                            
+                        }) {
+                            
+                           Text("Copy name")
+                            
+                        }
+                        
+                        
+                        Button(action: {
+                            
+                            
+                             let pathManager = pathsManager()
+                             
+                             if globaldata.settingsExportPath == "" {
+                                 docuemntsONMac = pathManager.locateDocumentsFolder()
+                                 print("THIIIs\(file)")
+                                 pathManager.exportSelectedFile(globaldata.filePathed, to: docuemntsONMac)
+                                 alertMessage = "File exported to Documents folder successfully."
+                             } else {
+                                 pathManager.exportSelectedFile(globaldata.filePathed, to: globaldata.settingsExportPath)
+                                 alertMessage = "File exported to custom path successfully."
+                             }
+                             
+                             if let index = files.firstIndex(of: file) {
+                                 files.remove(at: index)
+                                 print("\(file) was removed. Updated array: \(files)")
+                             } else {
+                                 print("\(file) not found in the array.")
+                             }
+
+                             
+                             
+                             let alertView = alertView()
+                             alertView.showAlert(withMessage: alertMessage)
+                            
+                            
+                        }) {
+                            
+                           Text("Export file")
+                            
+                        }
                         Button(action: {
                             deleteFile(file)
                         }) {
                             Text("Delete")
                         }
                     }
-                    .popover(isPresented: $showingPopoverSecond) {
+               /*     .popover(isPresented: $showingPopoverSecond) {
                         if selectedFileId == file {
                             VStack {
                                 Button(action: {
+                                   
                                     let pathManager = pathsManager()
                                     
                                     if globaldata.settingsExportPath == "" {
@@ -306,6 +358,15 @@ struct ContentView: View {
                                         pathManager.exportSelectedFile(globaldata.filePathed, to: globaldata.settingsExportPath)
                                         alertMessage = "File exported to custom path successfully."
                                     }
+                                    
+                                    if let index = files.firstIndex(of: file) {
+                                        files.remove(at: index)
+                                        print("\(file) was removed. Updated array: \(files)")
+                                    } else {
+                                        print("\(file) not found in the array.")
+                                    }
+
+                                    
                                     
                                     let alertView = alertView()
                                     alertView.showAlert(withMessage: alertMessage)
@@ -325,9 +386,14 @@ struct ContentView: View {
                             .padding(20)
                             .frame(width: 300, height: 250)
                         }
-                    }
+                    } */
+                    
+                    Divider()
+                    
+                    
                 }
             }
+            
             
             HStack {
                 Button {
@@ -485,6 +551,7 @@ If you want to export by the way just click open the needed file and just tap th
             .padding()
             .frame(width: 510, height: 300)
         }
+        
     }
     
     private func deleteFile(_ file: String) {
@@ -494,6 +561,7 @@ If you want to export by the way just click open the needed file and just tap th
             print("File removed from list: \(file)")
             let pathsManager = pathsManager()
             pathsManager.deleteTheFile(file)
+            
         } else {
             print("File \(file) not found in list.")
         }

@@ -70,6 +70,7 @@ struct SXMacApp: App {
                 .frame(width: 400, height: 400)
                 .fixedSize()
                 .background(LinearGradient(gradient: Gradient(colors: [.blue, .black, .blue]), startPoint: .top, endPoint: .bottom))
+                .listStyle(.sidebar)
         }
         .commands {
             CommandGroup(replacing: CommandGroupPlacement.appInfo) {
