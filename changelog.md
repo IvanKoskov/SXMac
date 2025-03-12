@@ -85,6 +85,6 @@
 - Cool blur effect on the main list of files
 - Solved problems when interface did not respond
 - Now files changes are visible instantly
-- Testing the SXMac installer for all MacOS systems
+- Testing the SXMac installer for all MacOS systems (soon release)
 - Some configs changes
 - License will be left same
