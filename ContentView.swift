@@ -4,7 +4,7 @@
 //
 //  Created by Evan Matthew on 09/03/2025
 //
-//SXMac © 2025 by Ivan Koskov (aka Evan Matthew) is licensed under Creative Commons Attribution-NonCommercial 4.0 International 
+//SXMac © 2025 by Ivan Koskov (aka Evan Matthew) is licensed under Creative Commons Attribution-NonCommercial 4.0 International
 //
 //To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/
 
@@ -13,6 +13,11 @@
 
 import SwiftUI
 import Foundation
+
+
+
+
+
 
 func openTextEditor(fileNameToEdit: String) -> String? {
     let pathsManager = pathsManager() // Objective-C class
@@ -65,6 +70,12 @@ struct ContentView: View {
     
     @Binding var isFileWindowVisible: Bool
     
+    @State private var timer: Timer?
+    
+    
+    
+    @State private var windowStatus: String = "Inactive"
+    
     var body: some View {
         VStack {
             VStack {
@@ -73,6 +84,22 @@ struct ContentView: View {
                         .font(.title)
                         .foregroundColor(.white)
                         .bold()
+                        .onAppear{
+                            
+                            startFileMonitoring()
+                            
+                            let pathsManager = pathsManager()
+                            let folder = pathsManager.filesLocationOnMac()
+                            print("\(folder) is here")
+                            files = pathsManager.fileListed(onTheLocation: folder)
+                        }
+                        .onDisappear {
+                                   // Invalidate the timer when the view disappears
+                                   timer?.invalidate()
+                               }
+                    
+                
+                    
                     
                     Image(systemName: "eye")
                         .font(.system(size: 40))
@@ -306,11 +333,18 @@ struct ContentView: View {
                         Button(action: {
                             
                             
+                            
                              let pathManager = pathsManager()
+                            
+                            let fullPAthedToFiles = pathManager.filesLocationOnMac()
+                            
+                            globaldata.filePathed = fullPAthedToFiles + "/" + file
                              
                              if globaldata.settingsExportPath == "" {
                                  docuemntsONMac = pathManager.locateDocumentsFolder()
                                  print("THIIIs\(file)")
+                                
+                                
                                  pathManager.exportSelectedFile(globaldata.filePathed, to: docuemntsONMac)
                                  alertMessage = "File exported to Documents folder successfully."
                              } else {
@@ -417,6 +451,17 @@ struct ContentView: View {
                 .font(.system(size: 10))
                 
                 Spacer()
+                
+                Button {
+                    
+                    let pathsManager = pathsManager()
+                    let folder = pathsManager.filesLocationOnMac()
+                    print("\(folder) is here")
+                    files = pathsManager.fileListed(onTheLocation: folder)
+                    
+                } label: {
+                    Image(systemName: "gear.circle")
+                }
                 
                 
                 Button {
@@ -566,5 +611,40 @@ If you want to export by the way just click open the needed file and just tap th
             print("File \(file) not found in list.")
         }
     }
+    
+    
+    
+    private func startFileMonitoring() {
+            timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
+                checkForNewFiles()
+            }
+        }
+
+    private func checkForNewFiles() {
+        let pathsManager = pathsManager()
+        let folderPath = pathsManager.filesLocationOnMac()  // Assuming this returns a string
+        let folderURL = URL(fileURLWithPath: folderPath)  // Convert string to URL
+        let fileManager = FileManager.default
+        
+        do {
+            // Get all files in the folder
+            let allFiles = try fileManager.contentsOfDirectory(at: folderURL, includingPropertiesForKeys: nil)
+
+            // Convert file URLs to file names (e.g., "file.txt", "image.jpg")
+            let fileNames = allFiles.map { $0.lastPathComponent }
+
+            // Compare with previously stored files to find new ones
+            let newFiles = fileNames.filter { !files.contains($0) }
+            if !newFiles.isEmpty {
+                files.append(contentsOf: newFiles)  // Append new files to the list
+                print("New files added: \(newFiles)")  // Print new files for debugging
+            }
+
+        } catch {
+            print("Failed to read contents of directory: \(error)")
+        }
+    }
+
+
 
 }
