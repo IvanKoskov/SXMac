@@ -67,6 +67,7 @@
 
 ## 1.0.3 & Public early testing beta 2.0.0
 
+- people can try out our app!
 - 1.0.5 is considered non usable
 - 1.0.3 version of code should solve many errors, crashes
 - 2.0.0 interanal alpha
@@ -76,3 +77,14 @@
 - Now themes and language highlighting is added automatically
 - and more
 - To do: improve usability, fix freezes in some parts of the app
+
+## 1.0.4 & Public early testing beta 2.0.0 beta 2
+
+- Rebuilded interface
+- Main window has better table view
+- Cool blur effect on the main list of files
+- Solved problems when interface did not respond
+- Now files changes are visible instantly
+- Testing the SXMac installer for all MacOS systems
+- Some configs changes
+- License will be left same
