@@ -36,7 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let styleMask: NSWindow.StyleMask = [.closable, .miniaturizable,/* .resizable,*/ .titled]
             let window = NSWindow()
             window.styleMask = styleMask
-            window.title = "About My App"
+            window.title = "SXMac editor"
             window.contentView = NSHostingView(rootView: AboutView())
             aboutBoxWindowController = NSWindowController(window: window)
         }

@@ -38,16 +38,18 @@ struct AboutView: View {
                 
                 .bold()
                 .popover(isPresented: $showDescription) {
-                    
-                    VStack {
-                        
-                        Text("```SXMac - on the go light rich text```")
-                            .padding()
-                        
-                        Text("```editor, code editor, markdown editor```")
+                    ScrollView {
+                        VStack {
+                            
+                            Text("```SXMac - on the go light rich text```")
+                                .padding()
+                            
+                            Text("```editor, code editor, markdown editor```")
+                        }
+                        .frame(width: 320, height: 150)
                     }
                     
-                    .frame(width: 320, height: 220)
+                 
                 }
           
             Link(destination: URL(string: "https://github.com/IvanKoskov/SXMac")!) {

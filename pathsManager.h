@@ -18,11 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 -(NSString *)locateDocumentsFolder;
 -(NSString *)filesLocationOnMac;
 -(nonnull NSArray<NSString *> *)fileListedOnTheLocation:(nonnull NSString *)folder;
--(BOOL)exportSelectedFile:(nonnull NSString *)path To:(nonnull NSString *)folder;
 -(NSString *)deleteTheFile:(NSString *)file;
 -(BOOL)importFileToTheApp:(NSString *)path;
 -(BOOL)saveTheNewTextToThefile:(NSString *)pathToFile And:(NSString *)contents;
 -(BOOL)createNewFile:(NSString *)fileName At:(NSString *)path;
+-(BOOL)exportSelectedFile:(nonnull NSString *)path To:(nonnull NSString *)folder;
 
 @end
 
