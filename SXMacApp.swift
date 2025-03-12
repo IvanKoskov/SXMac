@@ -17,7 +17,8 @@
 /____/_/|_/_/  /_/\__,_/\___/
 
  By Ivan Koskov (Evan Matthew)
-
+ 
+ SXMac © 2025 by Ivan Koskov (aka Evan Matthew) is licensed under Creative Commons Attribution-NonCommercial 4.0 International Public License
 
 */
 

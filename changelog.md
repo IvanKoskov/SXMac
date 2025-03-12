@@ -60,4 +60,5 @@
 - Export, Import your changes that you have made
 - Set your your out put path (finished)
 - Now it can be considered usable and we plan to maintain and improve it in nearest future with more options, languages, previews, shortcuts!
-
+- To do: fix bugs, make more options, refactor the code
+- Added dynamic color picker for the preview
