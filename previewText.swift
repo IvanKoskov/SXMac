@@ -21,7 +21,7 @@ struct previewText: View {
                 .background(bgColor) // Set background color for the Markdown view
              //   .ignoresSafeArea()
             
-            Button("SXMac previews \(globalfile.filePathed)") {
+            Button("Previews color of \(globalfile.filePathed)") {
                 showingColorMenu = true
             }
             .padding()

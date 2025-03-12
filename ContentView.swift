@@ -63,6 +63,8 @@ struct ContentView: View {
     
     @State var fileNameToImport = "";
     
+    @Binding var isFileWindowVisible: Bool
+    
     var body: some View {
         VStack {
             VStack {
@@ -93,6 +95,185 @@ struct ContentView: View {
                         let fullPAthedToFiles = pathsManager.filesLocationOnMac()
                         
                         print("helllo bruh")
+                        print(file)
+                        
+                        let fileURL = URL(fileURLWithPath: file)
+
+                        let fileExtension = fileURL.pathExtension //get the extesnion
+                        
+                 
+                        
+                        switch fileExtension {
+                        case "md":
+                            print("md")
+                            globaldata.language = .markdown
+
+                        case "actionscript":
+                            print("actionscript")
+                            globaldata.language = .actionscript
+
+                        case "ada":
+                            print("ada")
+                            globaldata.language = .ada
+
+                        case "apache":
+                            print("apache")
+                            globaldata.language = .apache
+
+                        case "applescript":
+                            print("applescript")
+                            globaldata.language = .applescript
+
+                        case "bash":
+                            print("bash")
+                            globaldata.language = .bash
+
+                        case "basic":
+                            print("basic")
+                            globaldata.language = .basic
+
+                        case "brainfuck":
+                            print("brainfuck")
+                            globaldata.language = .brainfuck
+
+                        case "c":
+                            print("c")
+                            globaldata.language = .c
+
+                        case "cpp":
+                            print("cpp")
+                            globaldata.language = .cpp
+
+                        case "cs":
+                            print("cs")
+                            globaldata.language = .cs
+
+                        case "css":
+                            print("css")
+                            globaldata.language = .css
+
+                        case "diff":
+                            print("diff")
+                            globaldata.language = .diff
+
+                        case "dockerfile":
+                            print("dockerfile")
+                            globaldata.language = .dockerfile
+
+                        case "go":
+                            print("go")
+                            globaldata.language = .go
+
+                        case "http":
+                            print("http")
+                            globaldata.language = .http
+
+                        case "java":
+                            print("java")
+                            globaldata.language = .java
+
+                        case "javascript":
+                            print("javascript")
+                            globaldata.language = .javascript
+
+                        case "json":
+                            print("json")
+                            globaldata.language = .json
+
+                        case "lua":
+                            print("lua")
+                            globaldata.language = .lua
+
+                        case "markdown":
+                            print("markdown")
+                            globaldata.language = .markdown
+
+                        case "makefile":
+                            print("makefile")
+                            globaldata.language = .makefile
+
+                        case "nginx":
+                            print("nginx")
+                            globaldata.language = .nginx
+
+                        case "objectivec":
+                            print("objectivec")
+                            globaldata.language = .objectivec
+
+                        case "pgsql":
+                            print("pgsql")
+                            globaldata.language = .pgsql
+
+                        case "php":
+                            print("php")
+                            globaldata.language = .php
+
+                        case "python":
+                            print("python")
+                            globaldata.language = .python
+
+                        case "ruby":
+                            print("ruby")
+                            globaldata.language = .ruby
+
+                        case "rust":
+                            print("rust")
+                            globaldata.language = .rust
+
+                        case "shell":
+                            print("shell")
+                            globaldata.language = .shell
+
+                        case "smalltalk":
+                            print("smalltalk")
+                            globaldata.language = .smalltalk
+
+                        case "sql":
+                            print("sql")
+                            globaldata.language = .sql
+
+                        case "swift":
+                            print("swift")
+                            globaldata.language = .swift
+
+                        case "tcl":
+                            print("tcl")
+                            globaldata.language = .tcl
+
+                        case "tex":
+                            print("tex")
+                            globaldata.language = .tex
+
+                        case "twig":
+                            print("twig")
+                            globaldata.language = .twig
+
+                        case "typescript":
+                            print("typescript")
+                            globaldata.language = .typescript
+
+                        case "vbnet":
+                            print("vbnet")
+                            globaldata.language = .vbnet
+
+                        case "vbscript":
+                            print("vbscript")
+                            globaldata.language = .vbscript
+
+                        case "xml":
+                            print("xml")
+                            globaldata.language = .xml
+
+                        case "yaml":
+                            print("yaml")
+                            globaldata.language = .yaml
+
+                        default:
+                            print("Could not find extension, manually select the needed default extension")
+                            globaldata.language = .markdown // Default to markdown if not found
+                        }
+
+                        
                         let contentsWrapped: String? = openTextEditor(fileNameToEdit: file)
                         
                         globaldata.contentsOfFileGlobal = contentsWrapped ?? "error"
@@ -170,6 +351,17 @@ struct ContentView: View {
                 .font(.system(size: 10))
                 
                 Spacer()
+                
+                
+                Button {
+                    isFileWindowVisible = true
+                    openWindow(id: "file-window")
+                    
+                    
+                } label: {
+                    Image(systemName: "folder.badge.plus")
+                }
+                
                 
                 Button {
                     let alertView = alertView()

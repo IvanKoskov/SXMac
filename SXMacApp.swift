@@ -37,9 +37,10 @@ class GlobalDataModel: ObservableObject {
 @main
 struct SXMacApp: App {
     @StateObject private var globaldata = GlobalDataModel()
+    @State private var isFileWindowVisible = true
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(isFileWindowVisible: $isFileWindowVisible)
                 .environmentObject(globaldata)
                 .frame(width: 400, height: 400)
                 .fixedSize()
@@ -89,7 +90,18 @@ struct SXMacApp: App {
         .windowResizabilityContentSize()
         .windowStyle(HiddenTitleBarWindowStyle()) // Optional: Hide title bar for second window
         
-        
+        Window("SXMac MarkDown", id: "file-window") {
+                    if isFileWindowVisible {
+                        newFileView( isFileWindowVisible: $isFileWindowVisible)
+                       
+                            .environmentObject(globaldata)
+                            .frame(width: 450, height: 150)
+                            .fixedSize()
+                            .background(LinearGradient(gradient: Gradient(colors: [.blue, .gray, .blue]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                    }
+                }
+                .windowResizabilityContentSize()
+                .windowStyle(HiddenTitleBarWindowStyle())
         
     }
 }

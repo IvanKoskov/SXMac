@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(NSString *)deleteTheFile:(NSString *)file;
 -(BOOL)importFileToTheApp:(NSString *)path;
 -(BOOL)saveTheNewTextToThefile:(NSString *)pathToFile And:(NSString *)contents;
+-(BOOL)createNewFile:(NSString *)fileName At:(NSString *)path;
 
 @end
 

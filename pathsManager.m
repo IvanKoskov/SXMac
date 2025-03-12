@@ -252,4 +252,27 @@
     return YES; // success
 }
 
+
+
+
+- (BOOL)createNewFile:(NSString *)fileName At:(NSString *)path {
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSString *pathToFile = [path stringByAppendingPathComponent:fileName];
+    
+    if (![fileManager fileExistsAtPath:pathToFile]) {
+        NSError *error = nil;
+        BOOL success = [fileManager createFileAtPath:pathToFile contents:nil attributes:nil];
+        if (!success) {
+            // Handle the error properly
+            NSLog(@"Error creating file: %@", error.localizedDescription);
+            return NO;
+        }
+    }
+    
+    return YES; // success
+}
+
+
 @end
