@@ -1,7 +1,8 @@
 # SXMac Markdown
 
 [![Platform](https://img.shields.io/badge/Platform-MacOS-blue.svg)](https://developer.apple.com/MacOS/)
-![SwiftUI Support](https://shields.io/badge/SwiftUI-macOS%20v10.15%20%7C%20iOS%20v13-green?logo=Swift&style=flat)
+![SwiftUI](https://img.shields.io/badge/SwiftUI-orange.svg)
+![Swift5](https://img.shields.io/badge/swift-5-blue.svg)
 
 
 <p align="center">
@@ -34,8 +35,9 @@ SXMac leaves what you need to quickly see a file or even start editing it. You c
 
 <img width="512" alt="Image" src="https://github.com/user-attachments/assets/e25475a2-e937-4b29-9019-0be9ab44efb3" />
 
+## Source files editor
 
-Code highlighting without any effort on any files you need. Yes, if you want you can use it totally for basic coding.
+Code highlighting without any effort on any files you need. Yes, if you want you can use it totally for basic coding. All code editor basic functionality in it! 
 
 <img width="712" alt="Image" src="https://github.com/user-attachments/assets/59f10110-1149-406f-8ea8-99b6bec70286" />
 
