@@ -41,6 +41,12 @@ Code highlighting without any effort on any files you need. Yes, if you want you
 
 <img width="712" alt="Image" src="https://github.com/user-attachments/assets/59f10110-1149-406f-8ea8-99b6bec70286" />
 
+## Markdown and rich text editor
+
+Syntax highlighting for it and clean, clear view
+
+<img width="712" alt="Image" src="https://github.com/user-attachments/assets/b45fea42-d992-4581-8099-672be6663871" />
+
 ## Preview rich markdown text
 
 Instantly preview your markdown file (.md) with all features supported!
