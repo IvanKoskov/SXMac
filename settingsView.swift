@@ -134,7 +134,7 @@ struct settingsView: View {
                             Text("Evan Matthew")
                                 .bold()
                                 .foregroundColor(.white)
-                                .padding(.leading, -3)
+                                .padding(.leading, -1)
                             
                             Text("Main developer, UI designer and maintainer")
                                 .font(.system(size: 14))

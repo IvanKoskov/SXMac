@@ -75,6 +75,17 @@ Clean and simple is what makes it usable. Simplicity!
 
 <img width="812" alt="Image" src="https://github.com/user-attachments/assets/d6995ffb-59d7-4577-954d-c0c3d5d46c60" />
 
+## Settings and more
+
+
+<img width="419" alt="Image" src="https://github.com/user-attachments/assets/9d092f77-eed6-4c12-9152-3ad54fd02c04" />
+
+SXMac has a special window for settings, options and not just that, but also SXMac has other functionality, file manipulation and etc what is not mentioned here. Download and install SXMac to share your opinion and review about it so we can make chnages and improve!
+
+## Developers, contributors, thanks!
+
+<img width="712" alt="Image" src="https://github.com/user-attachments/assets/fc7eccb1-6509-4b25-a1a2-50b8ec4e2270" />
+
 
 <details>
   <summary>Change-log & Version notes from the first 1.0.0 build</summary>
