@@ -39,6 +39,18 @@ Code highlighting without any effort on any files you need. Yes, if you want you
 
 <img width="712" alt="Image" src="https://github.com/user-attachments/assets/59f10110-1149-406f-8ea8-99b6bec70286" />
 
+## Preview rich markdown text
+
+Instantly preview your markdown file (.md) with all features supported!
+
+<img width="812" alt="Image" src="https://github.com/user-attachments/assets/e51a1f8c-826a-4615-bfa5-9b3cc08b60ce" />
+
+## Quick preview changes
+
+Quickly chnage the background color and see how it is on different backgrounds 
+
+<img width="701" alt="Image" src="https://github.com/user-attachments/assets/450cf606-3bca-4dd6-bea6-f23834982447" />
+
 
 
 <details>
