@@ -59,6 +59,21 @@ Quickly chnage the background color and see how it is on different backgrounds
 
 <img width="701" alt="Image" src="https://github.com/user-attachments/assets/450cf606-3bca-4dd6-bea6-f23834982447" />
 
+# Additional features
+
+## HTML editor
+
+
+SXMac being an editor for all kinds of formats also has a code editor for html and 
+has a full featured preview of a website similar to Markdown preview
+
+<img width="712" alt="Image" src="https://github.com/user-attachments/assets/0eaa4e5b-e339-43fd-b60a-8bc0d7b04373" />
+
+## Previews
+
+Clean and simple is what makes it usable. Simplicity!
+
+<img width="812" alt="Image" src="https://github.com/user-attachments/assets/d6995ffb-59d7-4577-954d-c0c3d5d46c60" />
 
 
 <details>

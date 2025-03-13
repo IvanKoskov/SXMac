@@ -139,6 +139,17 @@ struct SXMacApp: App {
                 .windowResizabilityContentSize()
                 .windowStyle(HiddenTitleBarWindowStyle())
         
+        Window(globaldata.filePathed, id: "web-window") {
+            
+            webPreviewView()
+                .environmentObject(globaldata)
+                .frame(width: 700, height: 600)
+                .fixedSize()
+                .background(LinearGradient(gradient: Gradient(colors: [.blue, .gray, .blue]), startPoint: .top, endPoint: .bottom))
+            
+        }
+        .windowResizabilityContentSize()
+    //    .windowStyle(HiddenTitleBarWindowStyle())
         
       
         

@@ -88,6 +88,26 @@ struct textEditView: View {
                                         .padding()
                                         .background(Color.clear)
                                         
+                                        
+                                        Divider()
+                                        
+                                        HStack {
+                                            Text("Web Preview")
+                                                .fontWeight(.bold)
+                                            Spacer()
+                                            Button("Render") {
+                                                print(globalfile.contentsOfFileGlobal)
+                                                openWindow(id: "web-window")
+                                                showingTextMenu = false
+                                            }
+                                        }
+                                        .padding()
+                                        .background(Color.clear)
+                                        
+                                        
+                                        
+                                      
+                                        
                                         Divider()
                                         
                                         HStack {
