@@ -9,7 +9,7 @@
     <a href="https://github.com/IvanKoskov/SXMac/blob/main/LICENSE">
         <img src="https://img.shields.io/github/license/IvanKoskov/SXMac?style=for-the-badge">
     </a>
-   
+    </br>
     <img src="https://img.shields.io/github/languages/top/IvanKoskov/SXMac?style=for-the-badge" alt="Language Badge">
     <a href="https://github.com/IvanKoskov/SXMac/actions">
         <img src="https://img.shields.io/github/workflow/status/IvanKoskov/SXMac/CI?style=for-the-badge" alt="Build Status">
