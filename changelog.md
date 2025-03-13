@@ -88,3 +88,10 @@
 - Testing the SXMac installer for all MacOS systems (soon release)
 - Some configs changes
 - License will be left same
+- Small UI allignment fixes
+- README added
+- Added an infinite process that will check for the files added
+- Perfomance seems to be better
+- Full HTML side support added
+- Separate HTML preview
+- HTML preview freezes fixes
