@@ -96,3 +96,8 @@
 - Separate HTML preview
 - HTML preview freezes fixes
 - Fixed the some alert were not showing up
+
+## 1.0.4 & Public early testing beta 2.0.1 beta 1
+
+- Bugs, freezes, alerts problems fixes
+- Testing all features
