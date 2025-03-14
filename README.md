@@ -188,7 +188,7 @@ SXMac has a special window for settings, options and not just that, but also SXM
 - Full HTML side support added
 - Separate HTML preview
 - HTML preview freezes fixes
-
+- Fixed the some alert were not showing up
   
 </details>
 
