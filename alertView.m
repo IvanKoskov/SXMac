@@ -30,7 +30,13 @@
 }
 
 
-- (void)showHelpMessage:(NSString *)message {
+
+
+
+
+
+
+- (void)showhelphMessage:(nonnull NSString *)message {
     // Create and configure the alert
     NSAlert *alert = [[NSAlert alloc] init];
     [alert setMessageText:@"SXMac interface"];
@@ -42,9 +48,5 @@
     // Display the alert modally, without depending on any specific window
     [alert runModal];
 }
-
-
-
-
 
 @end

@@ -473,7 +473,6 @@ struct ContentView: View {
                     Image(systemName: "folder.badge.plus")
                 }
                 
-                
                 Button {
                     let alertView = alertView()
                     var helpMessage: String = """
@@ -481,11 +480,11 @@ In order to delete files directly hold the file in the list with two fingers on 
 
 If you want to export by the way just click open the needed file and just tap the share icon on the pop menu!
 """
-                    alertView.showhelphMessage(helpMessage)
-                } label: {
+                    alertView.showhelphMessage(helpMessage)             } label: {
                     Image(systemName: "xmark.bin")
                 }
 
+               
                 Button {
                     let panel = NSOpenPanel()
                     panel.allowsMultipleSelection = false
