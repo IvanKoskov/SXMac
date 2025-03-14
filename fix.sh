@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+# This script is used too bypass and remove app restriction that can break the app
 # Define the path to the SXMac app
 app_path="/Applications/SXMac.app"
 
