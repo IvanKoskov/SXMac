@@ -25,7 +25,13 @@
 
 import SwiftUI
 import CodeEditor //for variable
+import FramelessWindow // custom windows
 
+
+struct VisualEffect: NSViewRepresentable {
+   func makeNSView(context: Self.Context) -> NSView { return NSVisualEffectView() }
+   func updateNSView(_ nsView: NSView, context: Context) { }
+}
 
 //delegate to make custom app bar option
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -52,6 +58,7 @@ class GlobalDataModel: ObservableObject {
     @Published var contentsOfFileGlobal: String = "BLANK"
     @Published var settingsExportPath: String = "";
     @Published var language = CodeEditor.Language.markdown
+    @Published var droppedFilePath: String?
 }
 
 
@@ -152,7 +159,15 @@ struct SXMacApp: App {
     //    .windowStyle(HiddenTitleBarWindowStyle())
         
       
+        FramelessWindow("Quick import", id: "drag-window") {
+            dragDropView()
+                .environmentObject(globaldata)
+                .frame(width: 400, height: 530)
         
+                    .background(VisualEffect())
+                .fixedSize()
+              }
+        .windowResizabilityContentSize()
     }
 }
 

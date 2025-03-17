@@ -452,6 +452,15 @@ struct ContentView: View {
                 
                 Spacer()
                 
+                
+                Button {
+                    
+                    openWindow(id: "drag-window")
+
+                } label: {
+                    Image(systemName: "eyedropper")
+                }
+                
                 Button {
                     
                     let pathsManager = pathsManager()
