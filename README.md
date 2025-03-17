@@ -1,5 +1,8 @@
 # SXMac Markdown
 
+---
+
+
 [![Platform](https://img.shields.io/badge/Platform-MacOS-blue.svg)](https://developer.apple.com/MacOS/)
 ![SwiftUI](https://img.shields.io/badge/SwiftUI-orange.svg)
 ![Swift5](https://img.shields.io/badge/swift-5-blue.svg)
@@ -220,6 +223,15 @@ SXMac has a special window for settings, options and not just that, but also SXM
 
   
 </details>
+
+---
+
+
+## Just simple :)
+
+> ***If you liked it or want to help the repo you can just star it and help us moving on and make more updates!***
+
+---
 
 
 ## License
