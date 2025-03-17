@@ -45,10 +45,16 @@ struct dragDropView: View {
             if let path = globalfile.droppedFilePath {
                 Text("File Path: \(path)")
                     .padding()
+               
             } else {
                 Text("No file dropped yet.")
                     .padding()
             }
+            
+            let pathsManager = pathsManager()
+            var _: Bool = pathsManager.importFile(toTheApp: globalfile.droppedFilePath ?? "error")
+           
+                
         }
         .padding()
     }
