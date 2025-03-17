@@ -201,6 +201,10 @@ SXMac has a special window for settings, options and not just that, but also SXM
 - Renaming files in place
 - UI updates
 - Website about our app is about to get finished
+- Renaming files fixes
+- New custom alert
+- pathsManager is now even more powerful!
+- To do: find testers and receive good feedback!))
 
   
 </details>

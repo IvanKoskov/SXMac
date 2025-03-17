@@ -108,4 +108,15 @@
 - Renaming files in place
 - UI updates
 - Website about our app is about to get finished
+- Renaming files fixes
+- New custom alert
+- pathsManager is now even more powerful!
+
+
+
+
+
+
+
+
 
