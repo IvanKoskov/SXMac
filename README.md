@@ -97,6 +97,25 @@ Clean and simple is what makes it usable. Simplicity!
 
 SXMac has a special window for settings, options and not just that, but also SXMac has other functionality, file manipulation and etc what is not mentioned here. Download and install SXMac to share your opinion and review about it so we can make chnages and improve!
 
+## Support
+
+SXMac supports Intel and Apple based chips Macs with minimum OS version of 14.6
+
+## Installation and setup of SXMac
+
+SXMac provides a straight forward install guide and its intaller for any case. All you need
+is to directly download the disk image with all needed files from our [GitHub](https://github.com/IvanKoskov/SXMac/releases/download/beta2/SXMacInstallerImage.dmg)
+
+<img width="746" alt="Image" src="https://github.com/user-attachments/assets/5ca19317-3d98-4e63-b03e-6d84055c80c3" />
+
+After the disk image is on the desktop open it with the default system utility and open .pkg installer or guide.txt file for instructions!
+
+<img width="688" alt="Image" src="https://github.com/user-attachments/assets/1545855b-5dfe-42f6-9ebe-c9ea559c6f56" />
+
+<img width="735" alt="Image" src="https://github.com/user-attachments/assets/bc1db0d2-4e23-4ff8-9102-7bb2e07d5d21" />
+
+<img width="735" alt="Image" src="https://github.com/user-attachments/assets/f5d41db0-6d9e-4440-aa87-d8b2b2c72816" />
+
 ## Developers, contributors, thanks!
 
 <img width="712" alt="Image" src="https://github.com/user-attachments/assets/fc7eccb1-6509-4b25-a1a2-50b8ec4e2270" />
