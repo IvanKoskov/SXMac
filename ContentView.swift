@@ -73,6 +73,12 @@ struct ContentView: View {
     @State private var timer: Timer?
     
     
+    //probably we need a file to have new file names all the time so it will be global
+    @State private var newFileName: String = "";
+    
+    // indicate alert state
+    @State private var showRenameFileAlert = false
+    
     
     @State private var windowStatus: String = "Inactive"
     
@@ -314,6 +320,26 @@ struct ContentView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                     .contextMenu {
+                        
+                        
+                        Button {
+                            print("Renaming file now")
+                            let alert = alertView()
+                            newFileName = alert.promptForFileName()
+                            print(newFileName)
+                            
+                            renamingfile(file, _newFile: newFileName)
+                            
+                        } label: {
+                            Text("Rename file")
+                            
+                        }
+                        .alert("Enter new name", isPresented: $showingAlert) {
+                            TextField("Input the final choice", text: $newFileName)
+                                 Button("Finish", action: submit)
+                             } message: {
+                                 Text("Changing the file name")
+                             }
                         
                         
                         Button(action: {
@@ -620,6 +646,26 @@ If you want to export by the way just click open the needed file and just tap th
         }
     }
     
+    private func renamingfile(_ file: String, _newFile: String) {
+        
+    //deprecated most likely in future update
+        
+        print("Renaming this : \(file)")
+        if let index = files.firstIndex(of: file) {
+            files.remove(at: index)
+            print("Old file removed from list: \(file)")
+            
+            let pathsManager = pathsManager()
+            var pathtoFiles: String = pathsManager.filesLocationOnMac()
+            var result: Bool =  pathsManager.renameFile(atLocation: _newFile, andAlso: pathtoFiles, andOld: file)
+            print("Renamed file FINAL \(result)")
+            
+            
+        } else {
+            print("File \(file) not found in list.")
+        }
+    }
+    
     
     
     private func startFileMonitoring() {
@@ -651,6 +697,12 @@ If you want to export by the way just click open the needed file and just tap th
         } catch {
             print("Failed to read contents of directory: \(error)")
         }
+    }
+    
+    private func submit() {
+        
+        //deprecated
+        
     }
 
 

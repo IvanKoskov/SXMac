@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(BOOL)saveTheNewTextToThefile:(NSString *)pathToFile And:(NSString *)contents;
 -(BOOL)createNewFile:(NSString *)fileName At:(NSString *)path;
 -(BOOL)exportSelectedFile:(nonnull NSString *)path To:(nonnull NSString *)folder;
+-(BOOL)renameFileAtLocation:(NSString *)newFileName andAlso:(NSString *)path andOld:(NSString *)oldFileName;
 
 @end
 

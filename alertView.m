@@ -37,7 +37,7 @@
 
 
 - (void)showhelphMessage:(nonnull NSString *)message {
-    // Create and configure the alert
+    // Create alert
     NSAlert *alert = [[NSAlert alloc] init];
     [alert setMessageText:@"SXMac interface"];
     [alert setInformativeText:message];
@@ -45,8 +45,36 @@
     
     [alert setAlertStyle:NSAlertStyleInformational];
     
-    // Display the alert modally, without depending on any specific window
+    // without depending on any specific window
     [alert runModal];
 }
+
+
+- (NSString *)promptForFileName {
+    // Create the alert with input box
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:@"Enter the file name"];
+    [alert setInformativeText:@"Please enter the name of the new desired file:"];
+    
+    // Create a text field to prompt the user for input
+    NSTextField *inputField = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)];
+    [alert setAccessoryView:inputField];
+    
+    // Add buttons to the alert
+    [alert addButtonWithTitle:@"OK"];
+    [alert addButtonWithTitle:@"Cancel"];
+    
+    // Run the modal alert
+    NSInteger response = [alert runModal];
+    
+    // Check the response 
+    if (response == NSAlertFirstButtonReturn) { // "OK" button
+        return [inputField stringValue];
+    } else {
+        return nil; // Cancel
+    }
+}
+
+
 
 @end

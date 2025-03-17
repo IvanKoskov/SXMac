@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)showAlertWithMessage:(NSString *)message; //for files stuff
 - (void)showhelphMessage:(NSString *)message; //for user guide
+- (NSString *)promptForFileName;
 
 @end
 

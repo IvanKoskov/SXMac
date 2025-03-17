@@ -276,4 +276,29 @@
 }
 
 
+
+- (BOOL)renameFileAtLocation:(nonnull NSString *)newFileName andAlso:(NSString *)path andOld:(NSString *)oldFileName {
+    
+   
+    NSString *oldPath = [path stringByAppendingPathComponent:oldFileName];
+    NSString *newPath = [path stringByAppendingPathComponent:newFileName];
+    
+   
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSError *error = nil;
+    
+    // Attempt to rename the file
+    BOOL success = [fileManager moveItemAtPath:oldPath toPath:newPath error:&error];
+    
+    if (success) {
+        return YES; // Success
+    } else {
+      
+        NSLog(@"Error renaming file: %@", error.localizedDescription);
+        return NO; // Failure
+    }
+}
+
+
 @end

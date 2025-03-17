@@ -43,7 +43,7 @@ struct dragDropView: View {
                 }
             
             if let path = globalfile.droppedFilePath {
-                Text("File Path: \(path)")
+                Text("Last file Path: \(path)")
                     .padding()
                
             } else {

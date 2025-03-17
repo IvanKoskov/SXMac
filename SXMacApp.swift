@@ -162,7 +162,7 @@ struct SXMacApp: App {
         FramelessWindow("Quick import", id: "drag-window") {
             dragDropView()
                 .environmentObject(globaldata)
-                .frame(width: 400, height: 530)
+                .frame(width: 400, height: 350)
         
                     .background(VisualEffect())
                 .fixedSize()

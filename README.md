@@ -194,6 +194,14 @@ SXMac has a special window for settings, options and not just that, but also SXM
 
 - Bugs, freezes, alerts problems fixes
 - Testing all features
+
+## 1.0.5 & Public early testing beta 2.0.1 beta 1
+
+- Drag and Drop support
+- Renaming files in place
+- UI updates
+- Website about our app is about to get finished
+
   
 </details>
 
