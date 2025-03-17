@@ -59,7 +59,19 @@ Quickly chnage the background color and see how it is on different backgrounds
 
 <img width="701" alt="Image" src="https://github.com/user-attachments/assets/450cf606-3bca-4dd6-bea6-f23834982447" />
 
-# Additional features
+## Handy features
+
+Quick actions in right place! Just double click and do needed action fast from small menu!
+
+<img width="400" alt="Image" src="https://github.com/user-attachments/assets/26c90fdd-b9bd-450a-8a82-543f08c2f017" />
+
+## Drag and Drop included!
+
+This is what can make any app 100x times more usable! Just select file from any mess and add it straight to our main menu!
+
+<img width="626" alt="Image" src="https://github.com/user-attachments/assets/a8d8466e-ce3b-47c2-8053-392efffb0f23" />
+
+# + Additional features
 
 ## HTML editor
 
