@@ -102,7 +102,7 @@
 - Bugs, freezes, alerts problems fixes
 - Testing all features
 
-## 1.0.5 & Public early testing beta 2.0.1 beta 1
+## 1.0.5 & Public early testing beta 2.0.1 beta 2
 
 - Drag and Drop support
 - Renaming files in place
