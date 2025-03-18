@@ -54,12 +54,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
 class GlobalDataModel: ObservableObject {
+    
+    
     @Published var filePathed: String = "blank"
     @Published var contentsOfFileGlobal: String = "BLANK"
     @Published var settingsExportPath: String = "";
     @Published var language = CodeEditor.Language.markdown
     @Published var droppedFilePath: String?
     @Published var version: String = "Not obtained";
+    @Published var theme: Gradient =  Gradient(colors: [.blue]) //persisted
+
+
 }
 
 
@@ -71,14 +76,18 @@ struct SXMacApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var globaldata = GlobalDataModel()
     @State private var isFileWindowVisible = true
+    @StateObject var gradientManager = GradientThemeManager()
     var body: some Scene {
         WindowGroup {
             ContentView(isFileWindowVisible: $isFileWindowVisible)
                 .environmentObject(globaldata)
+                .environmentObject(gradientManager)
                 .frame(width: 400, height: 400)
                 .fixedSize()
-                .background(LinearGradient(gradient: Gradient(colors: [.blue, .black, .blue]), startPoint: .top, endPoint: .bottom))
+           // .background(LinearGradient(gradient: Gradient(colors: [.blue, .black, .blue]), startPoint: .top, endPoint: .bottom))
+                .background(LinearGradient(gradient: globaldata.theme, startPoint: .top, endPoint: .bottom))
                 .listStyle(.sidebar)
+            
         }
         .commands {
             CommandGroup(replacing: CommandGroupPlacement.appInfo) {
@@ -95,9 +104,11 @@ struct SXMacApp: App {
         Window("SXMac settings", id: "second-window") { // Define the second window with an ID
             settingsView(versionSettings: "error")
                 .environmentObject(globaldata)
+                .environmentObject(gradientManager)
                 .frame(width: 600, height: 500)
                 .fixedSize()
-                .background(LinearGradient(gradient: Gradient(colors: [.cyan, .blue, .gray]), startPoint: .top, endPoint: .bottom))
+                .background(LinearGradient(gradient: globaldata.theme, startPoint: .top, endPoint: .bottom))
+              //  .background(LinearGradient(gradient: Gradient(colors: [.cyan, .blue, .gray]), startPoint: .top, endPoint: .bottom))
         }
         .windowResizabilityContentSize()
         .windowStyle(HiddenTitleBarWindowStyle()) // Optional: Hide title bar for second window
@@ -109,7 +120,8 @@ struct SXMacApp: App {
                 .environmentObject(globaldata)
                 .frame(width: 600, height: 500)
                 .fixedSize()
-                .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue, .gray]), startPoint: .top, endPoint: .bottom))
+                .background(LinearGradient(gradient: globaldata.theme, startPoint: .top, endPoint: .bottom))
+              //  .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue, .gray]), startPoint: .top, endPoint: .bottom))
         }
         .windowResizabilityContentSize()
         .windowStyle(HiddenTitleBarWindowStyle()) // Optional: Hide title bar for second window
@@ -119,7 +131,8 @@ struct SXMacApp: App {
                 .environmentObject(globaldata)
                 .frame(width: 600, height: 500)
                 .fixedSize()
-                .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue, .blue]), startPoint: .top, endPoint: .bottom))
+                .background(LinearGradient(gradient: globaldata.theme, startPoint: .top, endPoint: .bottom))
+              //  .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue, .blue]), startPoint: .top, endPoint: .bottom))
         }
         .windowResizabilityContentSize()
         .windowStyle(HiddenTitleBarWindowStyle()) // Optional: Hide title bar for second window
@@ -129,7 +142,8 @@ struct SXMacApp: App {
                 .environmentObject(globaldata)
                 .frame(width: 700, height: 600)
                 .fixedSize()
-                .background(LinearGradient(gradient: Gradient(colors: [.blue, .gray, .blue]), startPoint: .top, endPoint: .bottom))
+                .background(LinearGradient(gradient: globaldata.theme, startPoint: .top, endPoint: .bottom))
+               // .background(LinearGradient(gradient: Gradient(colors: [.blue, .gray, .blue]), startPoint: .top, endPoint: .bottom))
         }
         .windowResizabilityContentSize()
         .windowStyle(HiddenTitleBarWindowStyle()) // Optional: Hide title bar for second window
@@ -141,7 +155,8 @@ struct SXMacApp: App {
                             .environmentObject(globaldata)
                             .frame(width: 450, height: 150)
                             .fixedSize()
-                            .background(LinearGradient(gradient: Gradient(colors: [.blue, .gray, .blue]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                            .background(LinearGradient(gradient: globaldata.theme, startPoint: .topLeading, endPoint: .bottomTrailing))
+                           // .background(LinearGradient(gradient: Gradient(colors: [.blue, .gray, .blue]), startPoint: .topLeading, endPoint: .bottomTrailing))
                     }
                 }
                 .windowResizabilityContentSize()
@@ -153,7 +168,8 @@ struct SXMacApp: App {
                 .environmentObject(globaldata)
                 .frame(width: 700, height: 600)
                 .fixedSize()
-                .background(LinearGradient(gradient: Gradient(colors: [.blue, .gray, .blue]), startPoint: .top, endPoint: .bottom))
+                .background(LinearGradient(gradient: globaldata.theme, startPoint: .topLeading, endPoint: .bottomTrailing))
+              //  .background(LinearGradient(gradient: Gradient(colors: [.blue, .gray, .blue]), startPoint: .top, endPoint: .bottom))
             
         }
         .windowResizabilityContentSize()

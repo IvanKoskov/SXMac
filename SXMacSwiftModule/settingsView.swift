@@ -20,6 +20,11 @@ struct settingsView: View {
     
     @State var versionSettings: String
     
+    @EnvironmentObject var gradientManager: GradientThemeManager
+
+    
+
+    
     @State private var options = [
         infosettings(nameOFoption: "App files", descriptionText: "/user/documents/SXMacFiles..."),
         infosettings(nameOFoption: "Version", descriptionText: "2.0.2 alpha"),
@@ -73,6 +78,35 @@ struct settingsView: View {
                     TextField("Enter custom export path", text: $globaldata.settingsExportPath)
                         .padding()
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                }
+                .padding() // Add padding to each row
+                .background(Color.clear) // Ensure no background for the rows
+                
+                Divider()
+                
+                HStack {
+                    Text("Available custom themes")
+                        .fontWeight(.bold)
+                    Spacer()
+                    Picker("", selection: $globaldata.theme) {
+                        ForEach(gradientManager.themes) { theme in
+                            Text(theme.name)
+                                .tag(theme.gradient)  // Use .tag() to bind the gradient instead of the whole theme
+                        }
+                    }.onChange(of: globaldata.theme) { newValue in
+                        // Find the selected theme using the selected gradient
+                        if let selectedTheme = gradientManager.themes.first(where: { $0.gradient == newValue }) {
+                            print(selectedTheme.name)
+                            let pathsManager = pathsManager()
+                            let pathToUpdate = pathsManager.createGradientFolderAndFileInside()
+                            pathsManager.saveTheNewText(toThefile: pathToUpdate, and: selectedTheme.name)
+                        }
+                    }
+                  
+                    
+                    
+                    
+                    
                 }
                 .padding() // Add padding to each row
                 .background(Color.clear) // Ensure no background for the rows
@@ -193,6 +227,43 @@ struct settingsView: View {
                     }
                     .padding()
                     
+                    Divider()
+                    
+                    HStack {
+                        Text("Web page developer & various contributions")
+                            .bold()
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .center)
+                    }
+                    .padding()
+                    
+                    Divider()
+                    
+                    HStack {
+                        Image("tson")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .clipShape(Circle())
+                            .frame(width: 80, height: 80)
+                            .shadow(color: .gray, radius: 10, x: 0, y: 5)
+                        
+                        Spacer()
+                        
+                        VStack(alignment: .leading) {
+                            Text("TS0NW0RK")
+                                .bold()
+                                .foregroundColor(.white)
+                            
+                            Text("Contributor, web dev, promoter, advertiser")
+                                .font(.system(size: 14))
+                                .foregroundColor(.white)
+                        }
+                        .padding(.trailing, 12)
+                        .frame(maxWidth: .infinity, alignment: .trailing) // Ensure alignment is to the left
+                    }
+                    .padding()
+                    
+
                     Divider()
                     
                     // Special Thanks Section

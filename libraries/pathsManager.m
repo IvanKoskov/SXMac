@@ -300,5 +300,67 @@
     }
 }
 
+- (NSString *)createGradientFolderAndFileInside {
+    
+    // Get the path to the documents directory
+    NSArray *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [documentsDirectory firstObject];
+    
+    // Define the path for the "SXGradient" folder
+    NSString *folderGradient = [documentsPath stringByAppendingPathComponent:@"SXGradient"];
+    
+    // Check if the folder exists, if not, create it
+    BOOL isDirectory = NO;
+    if (![[NSFileManager defaultManager] fileExistsAtPath:folderGradient isDirectory:&isDirectory] || !isDirectory) {
+        NSError *error = nil;
+        [[NSFileManager defaultManager] createDirectoryAtPath:folderGradient withIntermediateDirectories:YES attributes:nil error:&error];
+        if (error) {
+            NSLog(@"Error creating folder: %@", error.localizedDescription);
+            return @"ERROR";
+        }
+    }
+    
+    // Define the path for the file
+    NSString *fileName = @"gradients.txt";
+    NSString *filePath = [folderGradient stringByAppendingPathComponent:fileName];
+    
+    // Check if the file exists, if it does, just return the file path
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+        return filePath;
+    }
+    
+    // If the file doesn't exist, create it with some initial content
+    NSError *error = nil;
+    NSString *initialContent = @"deepocean\n";
+    
+    // Create the file with initial content
+    BOOL fileCreated = [[NSFileManager defaultManager] createFileAtPath:filePath contents:[initialContent dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+    
+    if (!fileCreated || error) {
+        NSLog(@"Error creating file: %@", error.localizedDescription);
+        return @"ERROR";
+    }
+    
+    return filePath;
+}
+
+
+
+
+- (NSString *)readFilePlain:(nonnull NSString *)filePath {
+    
+    NSError *error = nil;
+       
+       // Read the file content as a string
+       NSString *fileContents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
+       
+       if (error) {
+           NSLog(@"Error reading file: %@", error.localizedDescription);
+           return nil;  // Return nil if there's an error
+       }
+       
+       return fileContents;  // Return the file contents as a string
+    
+}
 
 @end

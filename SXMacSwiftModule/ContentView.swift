@@ -92,6 +92,9 @@ struct ContentView: View {
                         .bold()
                         .onAppear{
                             
+                            let loadGr = loadGradient()
+                            loadGr.getThecontents()
+                            globaldata.theme = loadGr.getRightgradient()
                             
                             if let versionPointer = checkSupport() {  // checkSupport returns UnsafePointer<CChar>?
                                 // Convert UnsafePointer<CChar> to Swift String and assign it to globalData.version
@@ -109,6 +112,8 @@ struct ContentView: View {
                             let folder = pathsManager.filesLocationOnMac()
                             print("\(folder) is here")
                             files = pathsManager.fileListed(onTheLocation: folder)
+                            
+                            pathsManager.createGradientFolderAndFileInside()
                         }
                         .onDisappear {
                                    // Invalidate the timer when the view disappears
@@ -476,6 +481,7 @@ struct ContentView: View {
                 
                 Link(destination: URL(string: "https://t.me/Evan_Matthew")!) {
                     Text("By Evan Matthew")
+                        .foregroundColor(.white)
                 }
                 .font(.system(size: 10))
                 

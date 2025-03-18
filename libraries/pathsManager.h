@@ -16,14 +16,26 @@ NS_ASSUME_NONNULL_BEGIN
 @interface pathsManager : NSObject
 
 -(NSString *)locateDocumentsFolder;
+
 -(NSString *)filesLocationOnMac;
+
 -(nonnull NSArray<NSString *> *)fileListedOnTheLocation:(nonnull NSString *)folder;
+
 -(NSString *)deleteTheFile:(NSString *)file;
+
 -(BOOL)importFileToTheApp:(NSString *)path;
+
 -(BOOL)saveTheNewTextToThefile:(NSString *)pathToFile And:(NSString *)contents;
+
 -(BOOL)createNewFile:(NSString *)fileName At:(NSString *)path;
+
 -(BOOL)exportSelectedFile:(nonnull NSString *)path To:(nonnull NSString *)folder;
+
 -(BOOL)renameFileAtLocation:(NSString *)newFileName andAlso:(NSString *)path andOld:(NSString *)oldFileName;
+
+-(NSString *)createGradientFolderAndFileInside;
+
+-(NSString *)readFilePlain:(NSString *)filePath;
 
 @end
 
