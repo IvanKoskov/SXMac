@@ -231,7 +231,7 @@ After the disk image is on the desktop open it with the default system utility a
 - Bugs, freezes, alerts problems fixes
 - Testing all features
 
-## 1.0.5 & Public early testing beta 2.0.1 beta 1
+## 1.0.5 & Public early testing beta 2.0.1 beta 2 (2.0.2)
 
 - Drag and Drop support
 - Renaming files in place
@@ -240,7 +240,9 @@ After the disk image is on the desktop open it with the default system utility a
 - Renaming files fixes
 - New custom alert
 - pathsManager is now even more powerful!
-- To do: find testers and receive good feedback!))
+- Added the version checker
+- Project is now C compatible
+- To do: Switch to makefile?? Probably this is happening soon and will be in the next major update and in the last alpha version
 
   
 </details>
