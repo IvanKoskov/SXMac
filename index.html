@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SXMac</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(45deg, #0f0f1a, #1a2633);
+            background-size: 200% 200%;
+            animation: gradientShift 10s ease infinite;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-weight: 400;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+        .header {
+            background: linear-gradient(90deg, #3b82f6 0%, #1e40af 100%);
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 30px;
+        }
+        .header-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+        .content {
+            flex: 1;
+            padding: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .tab-content {
+            margin-top: 20px;
+        }
+        .readme-content h2 {
+            font-size: 30px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards 0.2s;
+            letter-spacing: 0.3px;
+        }
+        .feature-section {
+            padding: 15px;
+            border-left: 2px solid #3b82f6;
+            margin-bottom: 20px;
+            transition: opacity 0.3s ease, border-left-width 0.3s ease, background 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards 0.4s;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .feature-section:hover {
+            opacity: 0.95;
+            border-left-width: 4px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .feature-section h3 {
+            font-size: 22px;
+            font-weight: 500;
+            background: linear-gradient(90deg, #3b82f6, #1e40af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            letter-spacing: 0.2px;
+        }
+        .feature-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin: 0;
+            color: #e0e0e0;
+            font-weight: 400;
+        }
+        .feature-icon {
+            font-size: 18px;
+            color: #3b82f6;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+        .feature-section:hover .feature-icon {
+            transform: scale(1.2);
+        }
+        .feature-text {
+            flex-grow: 1;
+        }
+        .releases-section {
+            margin-top: 40px;
+        }
+        .releases-section h2 {
+            font-size: 26px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards 0.6s;
+        }
+        .release-link {
+            color: #66b0ff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .release-link:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            background: linear-gradient(90deg, #3b82f6 0%, #1e40af 100%);
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 30px;
+        }
+        .footer .author {
+            font-size: 14px;
+            font-weight: 500;
+            color: #ffffff;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards 0.8s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .nav-tabs {
+            justify-content: center;
+            border-bottom: none;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .nav-tabs .nav-link {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            padding: 10px 30px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+        .nav-tabs .nav-link.active {
+            background: linear-gradient(90deg, #3b82f6, #1e40af);
+            color: #ffffff;
+            font-weight: 600;
+        }
+        .nav-tabs .nav-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .requirements-list {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .requirement-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 5px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .requirement-item:hover {
+            transform: translateX(5px);
+            background: rgba(59, 130, 246, 0.2);
+        }
+        .requirement-icon {
+            font-size: 16px;
+            color: #3b82f6;
+            transition: transform 0.3s ease;
+        }
+        .requirement-item:hover .requirement-icon {
+            transform: rotate(20deg);
+        }
+        .requirement-item span {
+            font-size: 16px;
+            color: #e0e0e0;
+            font-weight: 400;
+        }
+        .requirement-item span strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-title">SXMac</div>
+    </div>
+
+    <div class="content">
+        <!-- Вкладки -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true">About</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="compatibility-tab" data-bs-toggle="tab" data-bs-target="#compatibility" type="button" role="tab" aria-controls="compatibility" aria-selected="false">Compatibility</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <!-- Вкладка About -->
+            <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+                <div class="readme-content">
+                    <h2>About SXMac</h2>
+                    <div id="about-content">
+                        <div class="feature-section">
+                            <i class="fab fa-apple feature-icon"></i>
+                            <div class="feature-text">
+                                <h3>Overview</h3>
+                                <p>SXMac is a lightweight, note-like app that can be used as a rich text editor, Markdown editor and preview, and code editor with more than 100 supported languages. If you need specific files or anything else in one place.</p>
+                            </div>
+                        </div>
+                        <div class="feature-section">
+                            <i class="fas fa-lightbulb feature-icon"></i>
+                            <div class="feature-text">
+                                <h3>Simplicity</h3>
+                                <p>While being about simplicity, SXMac combines all needs for editing any kind of text. We don’t always want to set it up, but work out of the box! That is all about it!</p>
+                            </div>
+                        </div>
+                        <div class="feature-section">
+                            <i class="fas fa-pen feature-icon"></i>
+                            <div class="feature-text">
+                                <h3>Note Taking</h3>
+                                <p>SXMac can be used as a note-taking app with a simple and clear interface that gets the job done. The main focus is to preview .md files and dynamically see changes in your editor, with file export, easy import, and a centralized experience.</p>
+                            </div>
+                        </div>
+                        <div class="feature-section">
+                            <i class="fas fa-unity feature-icon"></i>
+                            <div class="feature-text">
+                                <h3>Unity</h3>
+                                <p>SXMac lets you quickly view or edit files. You can easily drop them into the documents folder for recognition or use a file picker box.</p>
+                            </div>
+                        </div>
+                        <div class="feature-section">
+                            <i class="fas fa-code feature-icon"></i>
+                            <div class="feature-text">
+                                <h3>Source Files Editor</h3>
+                                <p>Code highlighting without effort for any files you need. Yes, you can use it for basic coding with all editor functionality!</p>
+                            </div>
+                        </div>
+                        <div class="feature-section">
+                            <i class="fas fa-code feature-icon"></i>
+                            <div class="feature-text">
+                                <h3>Markdown Editor</h3>
+                                <p>Syntax highlighting for a clean, clear view.</p>
+                            </div>
+                        </div>
+                        <div class="feature-section">
+                            <i class="fas fa-eye feature-icon"></i>
+                            <div class="feature-text">
+                                <h3>Preview Rich Markdown</h3>
+                                <p>Instantly preview your Markdown file (.md) with all features supported!</p>
+                            </div>
+                        </div>
+                        <div class="feature-section">
+                            <i class="fas fa-adjust feature-icon"></i>
+                            <div class="feature-text">
+                                <h3>Quick Preview Changes</h3>
+                                <p>Quickly change the background color and see how it looks on different backgrounds.</p>
+                            </div>
+                        </div>
+                        <div class="feature-section">
+                            <i class="fas fa-tools feature-icon"></i>
+                            <div class="feature-text">
+                                <h3>Handy Features</h3>
+                                <p>Quick actions in the right place! Double-click and perform needed actions fast from a small menu!</p>
+                            </div>
+                        </div>
+                        <div class="feature-section">
+                            <i class="fas fa-arrows-alt feature-icon"></i>
+                            <div class="feature-text">
+                                <h3>Drag and Drop</h3>
+                                <p>This makes the app 100x more usable! Select a file from any mess and add it straight to the main menu!</p>
+                            </div>
+                        </div>
+                        <div class="feature-section">
+                            <i class="fas fa-plus feature-icon"></i>
+                            <div class="feature-text">
+                                <h3>Additional Features</h3>
+                                <p>Includes an HTML editor with website preview — write and view HTML pages right in the app! Plus, many more features not mentioned here. Download SXMac to share your opinion and help us improve!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вкладка Compatibility -->
+            <div class="tab-pane fade" id="compatibility" role="tabpanel" aria-labelledby="compatibility-tab">
+                <div class="readme-content">
+                    <h2>Compatibility</h2>
+                    <div id="compatibility-content">
+                        <div class="feature-section">
+                            <i class="fas fa-laptop feature-icon"></i>
+                            <div class="feature-text">
+                                <h3>System Requirements</h3>
+                                <p>SXMac runs smoothly on macOS 14.6 and later. Whether you're rocking an Intel-based Mac or the latest Apple Silicon (M1, M2, and beyond), we've got you covered!</p>
+                                <div class="requirements-list">
+                                    <div class="requirement-item">
+                                        <i class="fas fa-check-circle requirement-icon"></i>
+                                        <span><strong>OS:</strong> macOS 14.6 or newer</span>
+                                    </div>
+                                    <div class="requirement-item">
+                                        <i class="fas fa-microchip requirement-icon"></i>
+                                        <span><strong>CPU:</strong> Intel x86_64 or Apple Silicon (ARM64)</span>
+                                    </div>
+                                    <div class="requirement-item">
+                                        <i class="fas fa-hdd requirement-icon"></i>
+                                        <span><strong>Storage:</strong> 20 MB free space</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="releases-section">
+            <h2>Releases</h2>
+            <p>Latest release: <a href="https://github.com/IvanKoskov/SXMac/releases/latest" class="release-link" target="_blank"><i class="fab fa-github"></i> GitHub Releases</a></p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="author">By Evan Matthew</div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
