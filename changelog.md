@@ -111,6 +111,9 @@
 - Renaming files fixes
 - New custom alert
 - pathsManager is now even more powerful!
+- Added the version checker
+- Project is now C compatible
+- To do: Switch to makefile?? Probably this is happening soon and will be in the next major update and in the last alpha version
 
 
 
