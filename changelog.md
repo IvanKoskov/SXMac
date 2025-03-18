@@ -115,8 +115,10 @@
 - Project is now C compatible
 - To do: Switch to makefile?? Probably this is happening soon and will be in the next major update and in the last alpha version
 - 18/3/2025 Our webiste is finished!
-- Themes
+- Themes and dynamic theme update for the whole app
 - New contributor joined us!
+- Added more themes!!
+- UI fixes
 
 
 
