@@ -142,7 +142,7 @@ After the disk image is on the desktop open it with the default system utility a
 
 ## Developers, contributors, thanks!
 
-<img width="712" alt="Image" src="https://github.com/user-attachments/assets/fc7eccb1-6509-4b25-a1a2-50b8ec4e2270" />
+<img width="712" alt="Image" src="https://github.com/user-attachments/assets/43bbca92-82ac-4289-bff9-83f0569d3635" />
 
 
 <details>
