@@ -59,6 +59,7 @@ class GlobalDataModel: ObservableObject {
     @Published var settingsExportPath: String = "";
     @Published var language = CodeEditor.Language.markdown
     @Published var droppedFilePath: String?
+    @Published var version: String = "Not obtained";
 }
 
 
@@ -92,7 +93,7 @@ struct SXMacApp: App {
         .windowResizabilityContentSize()
         
         Window("SXMac settings", id: "second-window") { // Define the second window with an ID
-            settingsView()
+            settingsView(versionSettings: "error")
                 .environmentObject(globaldata)
                 .frame(width: 600, height: 500)
                 .fixedSize()

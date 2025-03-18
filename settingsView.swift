@@ -15,20 +15,27 @@ struct infosettings: Identifiable {
 }
 
 struct settingsView: View {
+    
+    @EnvironmentObject var globaldata: GlobalDataModel
+    
+    @State var versionSettings: String
+    
     @State private var options = [
         infosettings(nameOFoption: "App files", descriptionText: "/user/documents/SXMacFiles..."),
-        infosettings(nameOFoption: "Version", descriptionText: "2.0.0 alpha"),
+        infosettings(nameOFoption: "Version", descriptionText: "2.0.2 alpha"),
         infosettings(nameOFoption: "Color scheme", descriptionText: "Deep shallow Ocean"),
         infosettings(nameOFoption: "Supported formats", descriptionText: ".md & other markdown"),
         infosettings(nameOFoption: "LICENSE", descriptionText: " Creative Commons Attribution-NonCommercial 4.0 International")
         
     ]
     
-    @EnvironmentObject var globaldata: GlobalDataModel
+    
     
     @Environment(\.openWindow) private var openWindow
     
     var body: some View {
+        
+       
         
         ScrollView {
             VStack(spacing: 0) {
@@ -39,6 +46,10 @@ struct settingsView: View {
                     .frame(maxWidth: 120,maxHeight: 120, alignment: .center)
                     .font(.system(size: 10))
                     .shadow(color: .gray, radius: 35, x: 0, y: 2)
+                    .onAppear{
+                        
+                        versionSettings = globaldata.version
+                    }
                 
                 // Zero spacing to make rows adjacent to each other
                 ForEach(options) { option in
@@ -62,6 +73,17 @@ struct settingsView: View {
                     TextField("Enter custom export path", text: $globaldata.settingsExportPath)
                         .padding()
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                }
+                .padding() // Add padding to each row
+                .background(Color.clear) // Ensure no background for the rows
+                
+                Divider()
+                
+                HStack {
+                    Text("OS support Status")
+                        .fontWeight(.bold)
+                    Spacer()
+                    Text(versionSettings)
                 }
                 .padding() // Add padding to each row
                 .background(Color.clear) // Ensure no background for the rows

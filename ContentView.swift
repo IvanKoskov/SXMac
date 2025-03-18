@@ -92,6 +92,17 @@ struct ContentView: View {
                         .bold()
                         .onAppear{
                             
+                            
+                            if let versionPointer = checkSupport() {  // checkSupport returns UnsafePointer<CChar>?
+                                // Convert UnsafePointer<CChar> to Swift String and assign it to globalData.version
+                                globaldata.version = String(cString: versionPointer)
+                                print(globaldata.version)  // Prints the version string, e.g., "Running on Mac OS X 14.6.1 (Supported)"
+                            } else {
+                                globaldata.version = "Error obtaining version"
+                                print(globaldata.version)  // Prints "Error obtaining version"
+                            }
+                            
+                            
                             startFileMonitoring()
                             
                             let pathsManager = pathsManager()
