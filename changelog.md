@@ -78,7 +78,7 @@
 - and more
 - To do: improve usability, fix freezes in some parts of the app
 
-## 1.0.4 & Public early testing beta 2.0.0 beta 2
+## 1.0.4 & Public early testing 2.0.0 beta 2
 
 - Rebuilded interface
 - Main window has better table view
@@ -97,12 +97,12 @@
 - HTML preview freezes fixes
 - Fixed the some alert were not showing up
 
-## 1.0.4 & Public early testing beta 2.0.1 beta 1
+## 1.0.4 & Public early testing 2.0.1 beta 1
 
 - Bugs, freezes, alerts problems fixes
 - Testing all features
 
-## 1.0.5 & Public early testing beta 2.0.1 beta 2 (2.0.2)
+## 1.0.5 & Public early testing 2.0.1 beta 2 
 
 - Drag and Drop support
 - Renaming files in place
@@ -120,7 +120,11 @@
 - Added more themes!!
 - UI fixes
 
+## 1.0.6 & Public early testing 2.0.1 beta 3
 
+- Finally works smoothly on most of Macs
+- UI is not conflicting
+- Themes + custom themes!
 
 
 
