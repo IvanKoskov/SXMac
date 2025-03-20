@@ -82,8 +82,8 @@ struct SXMacApp: App {
             ContentView(isFileWindowVisible: $isFileWindowVisible)
                 .environmentObject(globaldata)
                 .environmentObject(gradientManager)
-                .frame(width: 400, height: 400)
-                .fixedSize()
+              //  .frame(width: 400, height: 400)
+              //  .fixedSize()
            // .background(LinearGradient(gradient: Gradient(colors: [.blue, .black, .blue]), startPoint: .top, endPoint: .bottom))
                 .background(LinearGradient(gradient: globaldata.theme, startPoint: .top, endPoint: .bottom))
                 .listStyle(.sidebar)
@@ -105,8 +105,8 @@ struct SXMacApp: App {
             settingsView(versionSettings: "error")
                 .environmentObject(globaldata)
                 .environmentObject(gradientManager)
-                .frame(width: 600, height: 500)
-                .fixedSize()
+              //  .frame(width: 600, height: 500)
+              //  .fixedSize()
                 .background(LinearGradient(gradient: globaldata.theme, startPoint: .top, endPoint: .bottom))
               //  .background(LinearGradient(gradient: Gradient(colors: [.cyan, .blue, .gray]), startPoint: .top, endPoint: .bottom))
         }
@@ -118,8 +118,8 @@ struct SXMacApp: App {
         Window("SXMac MarkDown", id: "third-window") { // Define the second window with an ID
             textEditView()
                 .environmentObject(globaldata)
-                .frame(width: 600, height: 500)
-                .fixedSize()
+             //   .frame(width: 600, height: 500)
+           //     .fixedSize()
                 .background(LinearGradient(gradient: globaldata.theme, startPoint: .top, endPoint: .bottom))
               //  .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue, .gray]), startPoint: .top, endPoint: .bottom))
         }
@@ -129,8 +129,8 @@ struct SXMacApp: App {
         Window("SXMac MarkDown", id: "fourth-window") { // Define the second window with an ID
             languagesView()
                 .environmentObject(globaldata)
-                .frame(width: 600, height: 500)
-                .fixedSize()
+              //  .frame(width: 600, height: 500)
+              //  .fixedSize()
                 .background(LinearGradient(gradient: globaldata.theme, startPoint: .top, endPoint: .bottom))
               //  .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue, .blue]), startPoint: .top, endPoint: .bottom))
         }
@@ -140,8 +140,8 @@ struct SXMacApp: App {
         Window("SXMac MarkDown", id: "preview-window") { // Define the second window with an ID
             previewText()
                 .environmentObject(globaldata)
-                .frame(width: 700, height: 600)
-                .fixedSize()
+             //   .frame(width: 700, height: 600)
+            //    .fixedSize()
                 .background(LinearGradient(gradient: globaldata.theme, startPoint: .top, endPoint: .bottom))
                // .background(LinearGradient(gradient: Gradient(colors: [.blue, .gray, .blue]), startPoint: .top, endPoint: .bottom))
         }
@@ -179,12 +179,12 @@ struct SXMacApp: App {
         FramelessWindow("Quick import", id: "drag-window") {
             dragDropView()
                 .environmentObject(globaldata)
-                .frame(width: 400, height: 350)
+             //   .frame(width: 400, height: 350)
         
                     .background(VisualEffect())
-                .fixedSize()
+              //  .fixedSize()
               }
-        .windowResizabilityContentSize()
+       .windowResizabilityContentSize()
     }
 }
 

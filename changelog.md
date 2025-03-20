@@ -137,6 +137,11 @@
 - Polski (Need a translator to hire)
 - Chinese / 中国人 (Need a translator to hire)
 
+## 1.0.7 & Public early testing 2.0.1 beta 5 (Reborn!)
+
+- Windows are now resizing free and are saving its sizes when app was exited for your own preference!
+
+
 
 
 
