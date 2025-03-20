@@ -1,7 +1,489 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
 
+    },
+    "%@" : {
+
+    },
+    "```editor, code editor, markdown editor```" : {
+
+    },
+    "```Enter the full desired file```" : {
+
+    },
+    "```SXMac - on the go light rich text```" : {
+
+    },
+    "Add a new file" : {
+
+    },
+    "Add file" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить файл"
+          }
+        }
+      }
+    },
+    "And more" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить еще"
+          }
+        }
+      }
+    },
+    "Available custom themes" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доступные пользовательские темы"
+          }
+        }
+      }
+    },
+    "Available languages & Mardown" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доступные языки и Markdown"
+          }
+        }
+      }
+    },
+    "Available languages & Mardown picker" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доступные языки и выбор Mardown"
+          }
+        }
+      }
+    },
+    "buenos aires" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Буэнос-Айрес"
+          }
+        }
+      }
+    },
+    "By Evan Matthew" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "By Evan Matthew"
+          }
+        }
+      }
+    },
+    "Changing the file name" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изменение имени файла"
+          }
+        }
+      }
+    },
+    "Clearly preview the changes" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Четко просмотрите изменения"
+          }
+        }
+      }
+    },
+    "Close editor" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть редактор"
+          }
+        }
+      }
+    },
+    "Close Md manager" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть менеджер Md"
+          }
+        }
+      }
+    },
+    "CodeEditor, editor view, languages and other" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Редактор кода, вид редактора, языки и другое"
+          }
+        }
+      }
+    },
+    "Contributor, various help and co-owner" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Участник, различная помощь и совладелец"
+          }
+        }
+      }
+    },
+    "Contributor, web dev, promoter, advertiser" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Участник, веб-разработчик, промоутер, рекламодатель"
+          }
+        }
+      }
+    },
+    "Copy name" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Копировать название"
+          }
+        }
+      }
+    },
+    "Delete" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить"
+          }
+        }
+      }
+    },
+    "Developers & Contributors" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разработчики и участники"
+          }
+        }
+      }
+    },
+    "Discard changes" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отменить изменения"
+          }
+        }
+      }
+    },
+    "Dismiss" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Понятно"
+          }
+        }
+      }
+    },
+    "Drag and Drop Files Here" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перетащите файлы сюда"
+          }
+        }
+      }
+    },
+    "Drop files here" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перетащите сюда файлы"
+          }
+        }
+      }
+    },
+    "Easily find from files" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Легко найти в файлах"
+          }
+        }
+      }
+    },
+    "Edit markdown file" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Редактировать Markdown"
+          }
+        }
+      }
+    },
+    "Enter custom export path" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите собственный путь экспорта"
+          }
+        }
+      }
+    },
+    "Enter new name" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите новое имя"
+          }
+        }
+      }
+    },
+    "Evan Matthew" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evan Matthew"
+          }
+        }
+      }
+    },
+    "Export custom path" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экспортировать собственный путь"
+          }
+        }
+      }
+    },
+    "Export file" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экспортировать файл"
+          }
+        }
+      }
+    },
+    "Finish" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "завершить"
+          }
+        }
+      }
+    },
+    "Got it!" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Понятно!"
+          }
+        }
+      }
+    },
+    "Input the final choice" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите окончательный выбор"
+          }
+        }
+      }
+    },
+    "Last file Path: %@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Последний путь к файлу: %@"
+          }
+        }
+      }
+    },
+    "Main developer, UI designer and maintainer" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Главный разработчик, дизайнер пользовательского интерфейса и сопровождающий"
+          }
+        }
+      }
+    },
+    "Markdown viewer" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Просмотр Markdown, rich text"
+          }
+        }
+      }
+    },
+    "No file dropped yet." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Здесь еще не добавлен ни один файл."
+          }
+        }
+      }
+    },
+    "NOTE" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ПРИМЕЧАНИЕ"
+          }
+        }
+      }
+    },
+    "OS support Status" : {
+
+    },
+    "Other & Help" : {
+
+    },
+    "Preview" : {
+
+    },
+    "Previews color of %@" : {
+
+    },
+    "Provided file is created at the default path of SXMac app without errors" : {
+
+    },
+    "Quick import" : {
+
+    },
+    "Quit" : {
+
+    },
+    "Rename file" : {
+
+    },
+    "Render" : {
+
+    },
+    "Save" : {
+
+    },
+    "Save changes now" : {
+
+    },
+    "Search" : {
+
+    },
+    "Select Background Color" : {
+
+    },
+    "Settings languages info" : {
+
+    },
+    "Share & Export" : {
+
+    },
+    "Special thanks" : {
+
+    },
+    "SXMac" : {
+
+    },
+    "SXMac editing %@" : {
+
+    },
+    "SXMac MarkDown" : {
+
+    },
+    "SXMac Previews %@" : {
+
+    },
+    "SXMac rich editor" : {
+
+    },
+    "SXMac settings" : {
+
+    },
+    "Thanks ZeeZide's Swift library" : {
+
+    },
+    "The files are saved to the ```/SXMacFiles``` by default" : {
+
+    },
+    "To apply reopen the file from menu" : {
+
+    },
+    "To change highlight go to settings" : {
+
+    },
+    "TS0NW0RK" : {
+
+    },
+    "UI by Evan Matthew ♡" : {
+
+    },
+    "Version 2.0.0 alpha" : {
+
+    },
+    "Versions" : {
+
+    },
+    "Web page developer & various contributions" : {
+
+    },
+    "Web Preview" : {
+
+    },
+    "Welcome to SXMac" : {
+
+    },
+    "You can!" : {
+
+    },
+    "ZeeZide" : {
+
+    }
   },
   "version" : "1.0"
 }
