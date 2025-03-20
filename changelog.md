@@ -126,6 +126,16 @@
 - UI is not conflicting
 - Themes + custom themes!
 
+## 1.0.6 & Public early testing 2.0.1 beta 4 (localizations)
+
+- Added Localizable module
+- Support for languages will be added:
+- English (default)
+- українська (Need a translator to hire)
+- Русский (In progress)
+- Deutsch (Need a translator to hire)
+- Polski (Need a translator to hire)
+- Chinese / 中国人 (Need a translator to hire)
 
 
 
