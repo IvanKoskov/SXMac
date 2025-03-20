@@ -8,16 +8,44 @@
 
     },
     "```editor, code editor, markdown editor```" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Редактор, редактор кода, редактор Markdown"
+          }
+        }
+      }
     },
     "```Enter the full desired file```" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "```Введите полный желаемый файл ```"
+          }
+        }
+      }
     },
     "```SXMac - on the go light rich text```" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "```SXMac — легкий форматированный текст на ходу```"
+          }
+        }
+      }
     },
     "Add a new file" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить новый файл"
+          }
+        }
+      }
     },
     "Add file" : {
       "localizations" : {
@@ -144,7 +172,7 @@
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Участник, различная помощь и совладелец"
+            "value" : "Участник, различная помощь и совладелец, различная помощь в разработке"
           }
         }
       }
@@ -380,109 +408,354 @@
       }
     },
     "OS support Status" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Статус поддержки ОС"
+          }
+        }
+      }
     },
     "Other & Help" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Другое и помощь"
+          }
+        }
+      }
     },
     "Preview" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предварительный просмотр"
+          }
+        }
+      }
     },
     "Previews color of %@" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Превью цвета %@"
+          }
+        }
+      }
     },
     "Provided file is created at the default path of SXMac app without errors" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предоставленный файл создается по пути по умолчанию приложения SXMac без ошибок."
+          }
+        }
+      }
     },
     "Quick import" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Быстрый импорт"
+          }
+        }
+      }
     },
     "Quit" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выход"
+          }
+        }
+      }
     },
     "Rename file" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Переименовать файл"
+          }
+        }
+      }
     },
     "Render" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рендеринг"
+          }
+        }
+      }
     },
     "Save" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранить"
+          }
+        }
+      }
     },
     "Save changes now" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранить изменения сейчас"
+          }
+        }
+      }
     },
     "Search" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поиск"
+          }
+        }
+      }
     },
     "Select Background Color" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите цвет фона"
+          }
+        }
+      }
     },
     "Settings languages info" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Информация о языках"
+          }
+        }
+      }
     },
     "Share & Export" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поделиться и экспортировать"
+          }
+        }
+      }
     },
     "Special thanks" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Особая благодарность"
+          }
+        }
+      }
     },
     "SXMac" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SXMac"
+          }
+        }
+      }
     },
     "SXMac editing %@" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SXMac редактирует %@"
+          }
+        }
+      }
     },
     "SXMac MarkDown" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SXMac Markdown"
+          }
+        }
+      }
     },
     "SXMac Previews %@" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Превью SXMac %@"
+          }
+        }
+      }
     },
     "SXMac rich editor" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Редактор форматированного текста SXMac"
+          }
+        }
+      }
     },
     "SXMac settings" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки SXMac"
+          }
+        }
+      }
     },
     "Thanks ZeeZide's Swift library" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Благодаря библиотеке Swift ZeeZide"
+          }
+        }
+      }
     },
     "The files are saved to the ```/SXMacFiles``` by default" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "По умолчанию файлы сохраняются в ```/SXMacFiles```."
+          }
+        }
+      }
     },
     "To apply reopen the file from menu" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чтобы применить, снова откройте файл из меню*"
+          }
+        }
+      }
     },
     "To change highlight go to settings" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чтобы изменить выделение, зайдите в настройки"
+          }
+        }
+      }
     },
     "TS0NW0RK" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TS0NW0RK"
+          }
+        }
+      }
     },
     "UI by Evan Matthew ♡" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "UI от Evan Matthew ♡"
+          }
+        }
+      }
     },
     "Version 2.0.0 alpha" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия 2.0.0 alpha"
+          }
+        }
+      }
     },
     "Versions" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версии"
+          }
+        }
+      }
     },
     "Web page developer & various contributions" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разработчик веб-страниц и различные вклады"
+          }
+        }
+      }
     },
     "Web Preview" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Веб-просмотр"
+          }
+        }
+      }
     },
     "Welcome to SXMac" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добро пожаловать в SXMac"
+          }
+        }
+      }
     },
     "You can!" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ты можешь!"
+          }
+        }
+      }
     },
     "ZeeZide" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ZeeZide"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

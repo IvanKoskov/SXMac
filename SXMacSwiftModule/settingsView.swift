@@ -196,7 +196,9 @@ struct settingsView: View {
                                 .font(.system(size: 14))
                                 .foregroundColor(.white)
                         }
-                        .padding(.leading, 10)
+                      
+                      .padding(.leading, 10) 
+                        
                     }
                     .padding()
                     
