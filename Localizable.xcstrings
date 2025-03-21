@@ -67,6 +67,18 @@
         }
       }
     },
+    "Arrange by file name size (Biggest)" : {
+
+    },
+    "Arrange by file name size (Smallest)" : {
+
+    },
+    "Arranged by alphabetical order" : {
+
+    },
+    "Arranged by alphabetical versa" : {
+
+    },
     "Available custom themes" : {
       "localizations" : {
         "ru" : {

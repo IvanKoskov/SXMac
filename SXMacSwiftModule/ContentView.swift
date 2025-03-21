@@ -497,6 +497,44 @@ struct ContentView: View {
                 
                 
                 Button {
+                    print("Arrange")
+                } label: {
+                    Image(systemName: "rectangle.and.pencil.and.ellipsis")
+                } .contextMenu {
+                    
+                    Button {
+                        print("Arranged by name size")
+                        files.sort { $0.count > $1.count }
+                    } label: {
+                        Text("Arrange by file name size (Biggest)")
+                    }
+
+                    Button {
+                        print("Arranged by name size")
+                        files.sort { $0.count < $1.count }
+                    } label: {
+                        Text("Arrange by file name size (Smallest)")
+                    }
+                    
+                    Button {
+                        print("Arranged by alphabetical order")
+                        files.sort()
+                    } label: {
+                        Text("Arranged by alphabetical order")
+                    }
+                    
+                    Button {
+                        print("Arranged by alphabetical versa")
+                        files.sort { $0 > $1 } 
+                    } label: {
+                        Text("Arranged by alphabetical versa")
+                    }
+                    
+                }
+
+                
+                
+                Button {
                     
                     openWindow(id: "drag-window")
 
@@ -725,3 +763,5 @@ If you want to export by the way just click open the needed file and just tap th
 
 
 }
+
+

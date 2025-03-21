@@ -287,6 +287,11 @@ After the disk image is on the desktop open it with the default system utility a
 - Deutsch (Need a translator to hire)
 - Polski (Need a translator to hire)
 - Chinese / 中国人 (Need a translator to hire)
+
+## 1.0.7 & Public early testing 2.0.1 beta 5 (Reborn!)
+
+- Windows are now resizing free and are saving its sizes when app was exited for your own preference!
+- Added sorting menu with options to quickly and fast find the needed file
   
 </details>
 
