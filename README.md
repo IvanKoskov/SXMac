@@ -5,8 +5,9 @@
 
 [![Platform](https://img.shields.io/badge/Platform-MacOS-blue.svg)](https://developer.apple.com/MacOS/)
 ![SwiftUI](https://img.shields.io/badge/SwiftUI-orange.svg)
-![Swift5](https://img.shields.io/badge/swift-5-blue.svg)
-
+![Swift5](https://img.shields.io/badge/ObjectiveC-blue.svg)
+![Objective-C](https://img.shields.io/badge/swift-5-blue.svg)
+![C](https://img.shields.io/badge/C-blue.svg)
 
 <p align="center">
     <a href="https://github.com/IvanKoskov/SXMac/blob/main/LICENSE">
