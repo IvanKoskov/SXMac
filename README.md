@@ -304,6 +304,13 @@ After the disk image is on the desktop open it with the default system utility a
 
 ---
 
+## Contributing to the SXMac project
+
+> [!IMPORTANT]
+> In order to create a pull request your code should be readable, formatted to be relatively easy to analyze and be documented with some overall comments.
+
+---
+
 
 ## License
 
