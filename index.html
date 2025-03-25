@@ -135,6 +135,7 @@
             align-items: center;
             justify-content: center;
             padding: 0 30px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; /* Ensure font consistency */
         }
         .footer .author {
             font-size: 14px;
@@ -207,6 +208,16 @@
             color: #ffffff;
             font-weight: 600;
         }
+        .glow-image {
+            width: 512px;
+            margin-top: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+            transition: box-shadow 0.3s ease;
+        }
+        .glow-image:hover {
+            box-shadow: 0 0 25px rgba(255, 255, 255, 1);
+        }
     </style>
 </head>
 <body>
@@ -250,6 +261,7 @@
                             <div class="feature-text">
                                 <h3>Note Taking</h3>
                                 <p>SXMac can be used as a note-taking app with a simple and clear interface that gets the job done. The main focus is to preview .md files and dynamically see changes in your editor, with file export, easy import, and a centralized experience.</p>
+                                <img class="glow-image" alt="Image" src="https://github.com/user-attachments/assets/e25475a2-e937-4b29-9019-0be9ab44efb3" />
                             </div>
                         </div>
                         <div class="feature-section">
@@ -264,6 +276,7 @@
                             <div class="feature-text">
                                 <h3>Source Files Editor</h3>
                                 <p>Code highlighting without effort for any files you need. Yes, you can use it for basic coding with all editor functionality!</p>
+                                <img class="glow-image" alt="Image" src="https://github.com/user-attachments/assets/4f05524f-8f67-4821-b3fb-2f0cbf55ccdb" />
                             </div>
                         </div>
                         <div class="feature-section">
@@ -271,6 +284,7 @@
                             <div class="feature-text">
                                 <h3>Markdown Editor</h3>
                                 <p>Syntax highlighting for a clean, clear view.</p>
+                               
                             </div>
                         </div>
                         <div class="feature-section">
@@ -278,13 +292,15 @@
                             <div class="feature-text">
                                 <h3>Preview Rich Markdown</h3>
                                 <p>Instantly preview your Markdown file (.md) with all features supported!</p>
+                                <img class="glow-image" alt="Image" src="https://github.com/user-attachments/assets/e51a1f8c-826a-4615-bfa5-9b3cc08b60ce" />
                             </div>
                         </div>
                         <div class="feature-section">
                             <i class="fas fa-adjust feature-icon"></i>
                             <div class="feature-text">
                                 <h3>Quick Preview Changes</h3>
-                                <p>Quickly change the background color and see how it looks on different backgrounds.</p>
+                                <p>Quickly change the background color and see how it looks on different backgrounds. While making an article or anything else with Markdown or HTML!</p>
+                                <img class="glow-image" alt="Image" src="https://github.com/user-attachments/assets/450cf606-3bca-4dd6-bea6-f23834982447" />
                             </div>
                         </div>
                         <div class="feature-section">
@@ -292,6 +308,7 @@
                             <div class="feature-text">
                                 <h3>Handy Features</h3>
                                 <p>Quick actions in the right place! Double-click and perform needed actions fast from a small menu!</p>
+                                <img class="glow-image" alt="Image" src="https://github.com/user-attachments/assets/26c90fdd-b9bd-450a-8a82-543f08c2f017" />
                             </div>
                         </div>
                         <div class="feature-section">
@@ -299,6 +316,7 @@
                             <div class="feature-text">
                                 <h3>Drag and Drop</h3>
                                 <p>This makes the app 100x more usable! Select a file from any mess and add it straight to the main menu!</p>
+                                <img class="glow-image" alt="Image" src="https://github.com/user-attachments/assets/a8d8466e-ce3b-47c2-8053-392efffb0f23" />
                             </div>
                         </div>
                         <div class="feature-section">
@@ -306,6 +324,7 @@
                             <div class="feature-text">
                                 <h3>Additional Features</h3>
                                 <p>Includes an HTML editor with website preview — write and view HTML pages right in the app! Plus, many more features not mentioned here. Download SXMac to share your opinion and help us improve!</p>
+                                <img class="glow-image" alt="Image" src="https://github.com/user-attachments/assets/0eaa4e5b-e339-43fd-b60a-8bc0d7b04373" />
                             </div>
                         </div>
                     </div>
@@ -318,10 +337,11 @@
                     <h2>Compatibility</h2>
                     <div id="compatibility-content">
                         <div class="feature-section">
-                            <i class="fas fa-laptop feature-icon"></i>
+                            <i class="fas fa-laptop feature-icon"></i> <!-- Fixed the icon class -->
                             <div class="feature-text">
                                 <h3>System Requirements</h3>
-                                <p>SXMac runs smoothly on macOS 14.6 and later. Whether you're rocking an Intel-based Mac or the latest Apple Silicon (M1, M2, and beyond), we've got you covered!</p>
+                                <p>SXMac runs smoothly on macOS 14.6 and later. Whether you're rocking an Intel-based Mac or the latest Apple Silicon (M1, M2, and beyond), we've got you covered! However please notice that latest alpha is only for Apple chips, the upcoming stable release will receive universal support.</p>
+                                <img class="glow-image" alt="Image" src="https://github.com/user-attachments/assets/27167d68-af81-480c-92d8-78eb0656fa12" />
                                 <div class="requirements-list">
                                     <div class="requirement-item">
                                         <i class="fas fa-check-circle requirement-icon"></i>
@@ -329,7 +349,7 @@
                                     </div>
                                     <div class="requirement-item">
                                         <i class="fas fa-microchip requirement-icon"></i>
-                                        <span><strong>CPU:</strong> Intel x86_64 or Apple Silicon (ARM64)</span>
+                                        <span><strong>CPU:</strong>Apple Silicon (ARM64) latest</span>
                                     </div>
                                     <div class="requirement-item">
                                         <i class="fas fa-hdd requirement-icon"></i>
@@ -350,7 +370,7 @@
     </div>
 
     <div class="footer">
-        <div class="author">By Evan Matthew</div>
+        <div class="author">By Ivan Koskov aka Evan Matthew</div>
     </div>
 
     <!-- Bootstrap JS -->
