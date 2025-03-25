@@ -55,6 +55,12 @@ Multiple files editor with clear and simplistic interface. Mac OS native look an
 
 <img width="742" alt="Image" src="https://github.com/user-attachments/assets/305dd442-4347-4cbf-b95a-5713b27378a3" />
 
+## Specific application
+
+You can use SXMac separately only as an code editor which it can perform well.
+
+<img width="1517" alt="Image" src="https://github.com/user-attachments/assets/4f05524f-8f67-4821-b3fb-2f0cbf55ccdb" />
+
 ## Markdown and rich text editor
 
 Syntax highlighting for it and clean, clear view 
