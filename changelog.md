@@ -158,6 +158,7 @@
 - 1.0.9 will bring the starting menu with options on how to use editor.
 - Lots of code is no longer maintained so pull or get latest version
 - Thanks TS0NW0RK for help!
+- Added sorting by size of the files
 
 
 

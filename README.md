@@ -32,6 +32,8 @@ SXMac can be used as a note taking app with simple and clear interface that is d
 The main focus is to bhe able to previed .md files and dynamicly see changes in your editor.
 Not just that, but file export, easy import of files and centrilzied experience.
 
+What SXMac tries to advise for the user is all in one ready to use handy tools that can used on daily basis.
+
 However not being somehting well defined it serves a purpose!
 
 
@@ -41,11 +43,17 @@ SXMac leaves what you need to quickly see a file or even start editing it. You c
 
 <img width="512" alt="Image" src="https://github.com/user-attachments/assets/e25475a2-e937-4b29-9019-0be9ab44efb3" />
 
+In the basic editing mode (not a project mode) and project mode  you can easily sort files by different categories.
+
+<img width="292" alt="Image" src="https://github.com/user-attachments/assets/b25fe2da-7409-4dc7-bb55-b42fe5b50613" />
+
 ## Source files editor
 
-Code highlighting without any effort on any files you need. Yes, if you want you can use it totally for basic coding. All code editor basic functionality in it! 
+Code highlighting without any effort on any files you need. Yes, if you want you can use it totally for basic coding. All code editor basic functionality in it!
 
-<img width="712" alt="Image" src="https://github.com/user-attachments/assets/59f10110-1149-406f-8ea8-99b6bec70286" />
+Multiple files editor with clear and simplistic interface. Mac OS native look and actual feel of it is also making it fit into your workflow.
+
+<img width="742" alt="Image" src="https://github.com/user-attachments/assets/305dd442-4347-4cbf-b95a-5713b27378a3" />
 
 ## Markdown and rich text editor
 
@@ -310,6 +318,9 @@ After the disk image is on the desktop open it with the default system utility a
 - 1.0.9 will bring the starting menu with options on how to use editor.
 - Lots of code is no longer maintained so pull or get latest version
 - Thanks TS0NW0RK for help!
+- Added sorting by size of the files
+
+
   
 </details>
 

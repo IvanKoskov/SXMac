@@ -521,6 +521,21 @@ struct ContentView: View {
                 } .contextMenu {
                     
                     Button {
+                        
+                        let sorter = sortByFileSize()
+                        
+                        var sortedfilesBySzie = sorter.sort(byFileSize: files)
+                        
+                        files.removeAll()
+                        files.append(contentsOf: sortedfilesBySzie)
+                        
+                        print(sortedfilesBySzie)
+                        
+                    } label: {
+                        Text("Arrange by size of the files")
+                    }
+                    
+                    Button {
                         print("Arranged by name size")
                         files.sort { $0.count > $1.count }
                     } label: {
@@ -548,12 +563,6 @@ struct ContentView: View {
                         Text("Arranged by alphabetical versa")
                     }
                     
-                    Button {
-                        print("Arranged by data created ")
-                        files.sort { $0 > $1 }
-                    } label: {
-                        Text("Arranged by alphabetical versa")
-                    }
                     
                 }
 

@@ -389,7 +389,7 @@ struct TabFilesView: View {
     
     private var popoverView: some View {
         ScrollView {
-            
+            /*
             TextField(
                  "SXMac editor fast search",
                  text: $textToSearch
@@ -398,6 +398,7 @@ struct TabFilesView: View {
              .onSubmit {
                  print("done\(globalfile.contentsOfFileGlobal)")
              }
+             */ // in development
            
             Divider()
             
