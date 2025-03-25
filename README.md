@@ -57,7 +57,7 @@ Multiple files editor with clear and simplistic interface. Mac OS native look an
 
 ## Markdown and rich text editor
 
-Syntax highlighting for it and clean, clear view
+Syntax highlighting for it and clean, clear view 
 
 <img width="712" alt="Image" src="https://github.com/user-attachments/assets/b45fea42-d992-4581-8099-672be6663871" />
 
