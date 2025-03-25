@@ -57,6 +57,9 @@
         }
       }
     },
+    "Add file to the Tab" : {
+
+    },
     "And more" : {
       "localizations" : {
         "ru" : {
@@ -218,6 +221,9 @@
           }
         }
       }
+    },
+    "Delete current file Tab" : {
+
     },
     "Developers & Contributors" : {
       "localizations" : {
@@ -598,6 +604,15 @@
           }
         }
       }
+    },
+    "SXMac Editor Alpha" : {
+
+    },
+    "SXMac editor fast search" : {
+
+    },
+    "SXMac editor on %@" : {
+
     },
     "SXMac MarkDown" : {
       "localizations" : {

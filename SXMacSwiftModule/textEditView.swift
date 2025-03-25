@@ -9,11 +9,18 @@
 //the general view for editing the markdown files in SXMac
 
 
+// deprecated and gets removed from the code base in the next upcoming updates
+
+//NO LONGER SUPPORTED! ONLY IN CASE OF EDITING SINGLE FILES OR DOCUMENTATION!!!
+
 
 import SwiftUI
 import CodeEditor
 
 struct textEditView: View {
+    
+    @State private var currentlyEditingFiles: [String] = [""]  
+   
     
     @Environment(\.openWindow) private var openWindow
     

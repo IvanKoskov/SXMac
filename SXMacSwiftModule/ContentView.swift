@@ -17,7 +17,7 @@ import Foundation
 
 
 
-
+// Universal
 
 func openTextEditor(fileNameToEdit: String) -> String? {
     let pathsManager = pathsManager() // Objective-C class
@@ -329,13 +329,31 @@ struct ContentView: View {
                         
                         globaldata.filePathed = fullPAthedToFiles + "/" + file
                         
-                        openWindow(id: "third-window")
+                       // openWindow(id: "third-window")
+                        openWindow(id: "betaeditor-window")
                     }) {
                         Text(file)
                            
                     }
                     .buttonStyle(PlainButtonStyle())
                     .contextMenu {
+                        
+                      
+                        
+                   /*
+                        Button {
+                            let pathsManager = pathsManager()
+                            let fullPAthedToFiles = pathsManager.filesLocationOnMac()
+                            globaldata.filePathed = fullPAthedToFiles + "/" + file
+                            
+                            openWindow(id: "betaeditor-window")
+                            
+                        } label: {
+                            Text("Open more than one file")
+                            
+                        }
+                    
+                    */
                         
                         
                         Button {
@@ -526,6 +544,13 @@ struct ContentView: View {
                     Button {
                         print("Arranged by alphabetical versa")
                         files.sort { $0 > $1 } 
+                    } label: {
+                        Text("Arranged by alphabetical versa")
+                    }
+                    
+                    Button {
+                        print("Arranged by data created ")
+                        files.sort { $0 > $1 }
                     } label: {
                         Text("Arranged by alphabetical versa")
                     }

@@ -73,6 +73,7 @@ class GlobalDataModel: ObservableObject {
 
 @main
 struct SXMacApp: App {
+    @State private var pinnedWindow: NSWindow?
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var globaldata = GlobalDataModel()
     @State private var isFileWindowVisible = true
@@ -125,6 +126,35 @@ struct SXMacApp: App {
         }
         .windowResizabilityContentSize()
         .windowStyle(HiddenTitleBarWindowStyle()) // Optional: Hide title bar for second window
+        
+        
+        
+        Window("SXMac Editor Alpha", id: "betaeditor-window") { // Define the second window with an ID
+            TabFilesView()
+             /*   .onAppear {
+                                 // Access the window after it appears
+                                 if let window = NSApplication.shared.windows.first {
+                                     // Set the window to stay on top (if it's the window you want)
+                                     window.level = .floating
+                                 }
+                             }
+              */
+            
+                .onAppear {
+                                   setWindowToStayOnTop(windowID: "betaeditor-window")
+                               }
+            
+                .environmentObject(globaldata)
+             //   .frame(width: 600, height: 500)
+           //     .fixedSize()
+                .background(LinearGradient(gradient: globaldata.theme, startPoint: .top, endPoint: .bottom))
+              //  .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue, .gray]), startPoint: .top, endPoint: .bottom))
+        }
+        .windowResizabilityContentSize()
+        .windowStyle(HiddenTitleBarWindowStyle()) // Optional: Hide title bar for second window
+        
+        
+        
         
         Window("SXMac MarkDown", id: "fourth-window") { // Define the second window with an ID
             languagesView()
@@ -186,6 +216,18 @@ struct SXMacApp: App {
               }
        .windowResizabilityContentSize()
     }
+    
+    
+    
+    func setWindowToStayOnTop(windowID: String) {
+            // Find the specific window by its ID
+            if let window = NSApplication.shared.windows.first(where: { $0.identifier?.rawValue == windowID }) {
+                // Set the window to stay on top
+                window.level = .floating
+            }
+        }
+    
+    
 }
 
 

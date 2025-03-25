@@ -293,6 +293,23 @@ After the disk image is on the desktop open it with the default system utility a
 
 - Windows are now resizing free and are saving its sizes when app was exited for your own preference!
 - Added sorting menu with options to quickly and fast find the needed file
+- TO DO: Add more sorting, single file opening for editing, in file text search and more
+- Multiple files smart editor
+- Redefine the app itself
+- Finally get full Intel Macs support
+- Change website again
+
+## 1.0.8 & Public early testing 2.0.1 beta 6 (Major update)
+
+- Opening multiple files at once
+- Sorting files in the menu of fast access files
+- Menu bar module is in final stages and will be released soon
+- Now editor is always on top
+- Rewritten text editor
+- Can be some bugs still, but it is all working.
+- 1.0.9 will bring the starting menu with options on how to use editor.
+- Lots of code is no longer maintained so pull or get latest version
+- Thanks TS0NW0RK for help!
   
 </details>
 

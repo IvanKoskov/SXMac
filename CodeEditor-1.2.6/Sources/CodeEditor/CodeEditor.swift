@@ -329,6 +329,7 @@ public struct CodeEditor: View {
                                 autoscroll  : autoscroll)
   }
 }
+    
 
 struct CodeEditor_Previews: PreviewProvider {
   
