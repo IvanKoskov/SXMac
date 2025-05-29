@@ -34,7 +34,7 @@ Not just that, but file export, easy import of files and centrilzied experience.
 
 What SXMac tries to advise for the user is all in one ready to use handy tools that can used on daily basis.
 
-However not being somehting well defined it serves a purpose!
+However not being something well defined it serves a purpose!
 
 
 ## Unity
